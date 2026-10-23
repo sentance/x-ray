@@ -3,7 +3,8 @@ import { computed, onBeforeUnmount, ref, shallowRef, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import { api } from '@/api/client'
 import type { Leaderboard, LeaderboardOrder, LeaderboardPeriod, LeaderboardRow } from '@/api/types'
-import { date, num, shortAddress, usd } from '@/lib/format'
+import { shortAddress, usd } from '@/lib/format'
+import TagChips from '@/components/TagChips.vue'
 
 const PERIODS: { value: LeaderboardPeriod; label: string }[] = [
   { value: 'DAY', label: 'Today' },
@@ -96,13 +97,6 @@ function displayName(row: LeaderboardRow): string {
   // Wallets without a username get an address-derived placeholder name from Polymarket.
   if (!row.name || (row.name.startsWith('0x') && row.name.length > 20)) return shortAddress(row.address)
   return row.name
-}
-
-function sampleHint(row: LeaderboardRow): string | null {
-  const t = row.tag
-  if (!t || t.source !== 'QUICK' || !t.sampleTrades) return null
-  const span = t.sampleFromTs && t.sampleToTs ? ` (${date(t.sampleFromTs)} – ${date(t.sampleToTs)})` : ''
-  return `From its last ${num(t.sampleTrades)} trades${span}. Open the wallet for a full analysis.`
 }
 </script>
 
@@ -197,7 +191,7 @@ function sampleHint(row: LeaderboardRow): string | null {
           <tr>
             <th class="w-10 px-3 py-2 font-normal">#</th>
             <th class="px-3 py-2 font-normal">Trader</th>
-            <th class="px-3 py-2 font-normal">Strategy</th>
+            <th class="hidden px-3 py-2 font-normal md:table-cell">Strategy</th>
             <th class="whitespace-nowrap px-3 py-2 text-right font-normal">P&amp;L</th>
             <th class="hidden px-3 py-2 text-right font-normal sm:table-cell">Volume</th>
           </tr>
@@ -227,29 +221,9 @@ function sampleHint(row: LeaderboardRow): string | null {
                   <span class="block font-mono text-xs text-slate-500">{{ shortAddress(row.address) }}</span>
                 </span>
               </RouterLink>
+              <div class="mt-2 md:hidden"><TagChips :row="row" /></div>
             </td>
-            <td class="px-3 py-3 align-top">
-              <template v-if="row.tag">
-                <div class="flex flex-wrap gap-1.5" :title="row.tag.summary">
-                  <span
-                    v-for="l in row.tag.labels"
-                    :key="l.name"
-                    :class="[
-                      'rounded-full px-2 py-0.5 text-xs',
-                      l.kind === 'STRATEGY' ? 'bg-sky-500/15 text-sky-200' : 'bg-slate-800 text-slate-300',
-                    ]"
-                    >{{ l.name }}</span
-                  >
-                  <span v-if="!row.tag.labels.length" class="text-xs text-slate-500">{{ row.tag.summary }}</span>
-                </div>
-                <div class="mt-1 text-xs text-slate-500">
-                  <span v-if="row.tag.source === 'FULL'">Full history</span>
-                  <span v-else :title="sampleHint(row) ?? undefined">Recent trades</span>
-                </div>
-              </template>
-              <span v-else-if="row.tagPending" class="text-xs text-slate-500">Tagging…</span>
-              <span v-else class="text-xs text-slate-500">Couldn't tag; open the wallet to analyze it.</span>
-            </td>
+            <td class="hidden px-3 py-3 align-top md:table-cell"><TagChips :row="row" /></td>
             <td class="whitespace-nowrap px-3 py-3 text-right align-top tabular-nums text-slate-100">
               {{ usd(row.pnl, { signed: true }) }}
             </td>

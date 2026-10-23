@@ -11,12 +11,13 @@ spring:
   mvc:
     async:
       request-timeout: 300s
+  web:
+    error:
+      # ResponseStatusException reasons (e.g. "No Polymarket profile named …") are shown to the user.
+      include-message: always
 
 server:
   port: 8080
-  error:
-    # ResponseStatusException reasons (e.g. "No Polymarket profile named …") are shown to the user.
-    include-message: always
 
 xray:
   polymarket:

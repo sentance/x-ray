@@ -28,19 +28,14 @@ public class StrategyProfiler {
 
 	private static final int TOP_MARKETS = 10;
 
-	private final ActivityStatsRepository stats;
-
-	public StrategyProfiler(ActivityStatsRepository stats) {
-		this.stats = stats;
-	}
-
 	/**
-	 * @param flows the wallet's per-market flows
+	 * @param stats the wallet's activity aggregates, over its full history or a recent sample
+	 * @param flows the wallet's per-market flows, over the same activity
 	 * @param markets the same markets as {@link MarketResult}s
 	 */
-	public StrategyProfile profile(String address, List<MarketFlows> flows, List<MarketResult> markets) {
-		List<TypeTotal> totals = stats.typeTotals(address);
-		var timing = stats.timing(address);
+	public StrategyProfile profile(ActivityStats stats, List<MarketFlows> flows, List<MarketResult> markets) {
+		List<TypeTotal> totals = stats.typeTotals();
+		var timing = stats.timing();
 
 		long buys = count(totals, "TRADE", "BUY");
 		long sells = count(totals, "TRADE", "SELL");
@@ -58,8 +53,8 @@ public class StrategyProfiler {
 				crypto.stream().mapToDouble(MarketResult::volume).sum());
 
 		return new StrategyProfile(activity, categories, marketTypes, assets, bothSides(markets, volume),
-				exits(flows, buyUsdc, sellUsdc), entryPrices(address, flows), expiry(address),
-				stats.tradeSizes(address), timing(timing), top(markets, Comparator.comparingDouble(MarketResult::pnl).reversed()),
+				exits(flows, buyUsdc, sellUsdc), entryPrices(stats, flows), expiry(stats),
+				stats.tradeSizes(), timing(timing), top(markets, Comparator.comparingDouble(MarketResult::pnl).reversed()),
 				top(markets, Comparator.comparingDouble(MarketResult::pnl)),
 				markets.stream().mapToDouble(MarketResult::pnl).sum());
 	}
@@ -98,8 +93,8 @@ public class StrategyProfiler {
 				Stats.safeDiv(mergeUsdc, buyUsdc), redeemUsdc);
 	}
 
-	private EntryPrices entryPrices(String address, List<MarketFlows> flows) {
-		List<Bucket> buckets = stats.entryPriceBuckets(address);
+	private static EntryPrices entryPrices(ActivityStats stats, List<MarketFlows> flows) {
+		List<Bucket> buckets = stats.entryPriceBuckets();
 		double total = buckets.stream().mapToDouble(Bucket::usdc).sum();
 		double favourites = buckets.stream()
 			.filter(b -> b.label().startsWith("0.90") || b.label().startsWith("≥"))
@@ -112,9 +107,9 @@ public class StrategyProfiler {
 				Stats.safeDiv(usdc, shares));
 	}
 
-	private Expiry expiry(String address) {
-		Double seconds = stats.medianSecondsToExpiry(address);
-		return new Expiry(stats.timeToExpiryBuckets(address), seconds == null ? null : seconds / 60);
+	private static Expiry expiry(ActivityStats stats) {
+		Double seconds = stats.medianSecondsToExpiry();
+		return new Expiry(stats.timeToExpiryBuckets(), seconds == null ? null : seconds / 60);
 	}
 
 	private static Timing timing(ActivityStatsRepository.Timing t) {

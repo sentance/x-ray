@@ -97,7 +97,7 @@ public class AnalysisService {
 		return cached(address, "strategy", StrategyReport.class, () -> {
 			List<MarketFlows> flows = activityStats.marketFlows(address);
 			List<MarketResult> markets = flows.stream().map(MarketResult::of).toList();
-			StrategyProfile profile = profiler.profile(address, flows, markets);
+			StrategyProfile profile = profiler.profile(activityStats.forWallet(address), flows, markets);
 			return new StrategyReport(profile, classifier.classify(profile, pnl(address).totals()));
 		});
 	}

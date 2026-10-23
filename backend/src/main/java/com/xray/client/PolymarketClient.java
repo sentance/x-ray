@@ -56,7 +56,20 @@ public class PolymarketClient {
 			}));
 	}
 
-	/** Most recent trades, newest first. Used for quick profiles without a full sync. */
+	/** Most recent activity of every type, newest first. Used for quick profiles without a full sync. */
+	public List<Activity> recentActivity(String address, int limit, int offset) {
+		return caller.call("activity " + address, () -> data.get()
+			.uri(u -> u.path("/activity")
+				.queryParam("user", address)
+				.queryParam("limit", limit)
+				.queryParam("offset", offset)
+				.build())
+			.retrieve()
+			.body(new ParameterizedTypeReference<List<Activity>>() {
+			}));
+	}
+
+	/** Most recent trades, newest first. */
 	public List<Activity> recentTrades(String address, int limit, int offset) {
 		return caller.call("activity " + address, () -> data.get()
 			.uri(u -> u.path("/activity")
@@ -97,13 +110,17 @@ public class PolymarketClient {
 			}));
 	}
 
-	/** @param period DAY, WEEK, MONTH or ALL */
-	public List<LeaderboardEntry> leaderboard(String period, String category, int limit, int offset) {
+	/**
+	 * @param period DAY, WEEK, MONTH or ALL
+	 * @param orderBy PNL or VOL
+	 */
+	public List<LeaderboardEntry> leaderboard(String period, String category, String orderBy, int limit,
+			int offset) {
 		return caller.call("leaderboard", () -> data.get()
 			.uri(u -> u.path("/v1/leaderboard")
 				.queryParam("timePeriod", period)
 				.queryParam("category", category)
-				.queryParam("orderBy", "PNL")
+				.queryParam("orderBy", orderBy)
 				.queryParam("limit", limit)
 				.queryParam("offset", offset)
 				.build())

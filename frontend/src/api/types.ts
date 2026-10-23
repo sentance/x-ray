@@ -217,3 +217,33 @@ export interface DecayReport {
   verdict: string
   explanation: string
 }
+
+export type LeaderboardPeriod = 'DAY' | 'WEEK' | 'MONTH' | 'ALL'
+export type LeaderboardOrder = 'PNL' | 'VOL'
+
+export interface LeaderboardTag {
+  /** FULL: from the wallet's synced history. QUICK: from its most recent ~1,000 activities. */
+  source: 'FULL' | 'QUICK'
+  summary: string
+  labels: Label[]
+  sampleTrades: number | null
+  sampleFromTs: number | null
+  sampleToTs: number | null
+}
+
+export interface LeaderboardRow {
+  rank: number
+  address: string
+  name: string | null
+  profileImage: string | null
+  verified: boolean
+  pnl: number
+  volume: number
+  tag: LeaderboardTag | null
+  tagPending: boolean
+}
+
+export interface Leaderboard {
+  rows: LeaderboardRow[]
+  pending: number
+}

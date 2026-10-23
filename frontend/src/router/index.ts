@@ -11,9 +11,11 @@ const router = createRouter({
       component: () => import('@/views/WalletView.vue'),
       props: true,
     },
+    { path: '/leaderboard', name: 'leaderboard', component: () => import('@/views/LeaderboardView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
-  scrollBehavior: () => ({ top: 0 }),
+  // Filter changes only touch the query; keep the reader's place for those.
+  scrollBehavior: (to, from) => (to.path === from.path ? false : { top: 0 }),
 })
 
 export default router

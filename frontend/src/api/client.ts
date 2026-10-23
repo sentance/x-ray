@@ -1,5 +1,8 @@
 import type {
   DecayReport,
+  Leaderboard,
+  LeaderboardOrder,
+  LeaderboardPeriod,
   Overview,
   PnlReport,
   SkillReport,
@@ -40,4 +43,6 @@ export const api = {
   strategy: (address: string) => request<StrategyReport>(`${wallet(address)}/strategy`),
   skill: (address: string) => request<SkillReport>(`${wallet(address)}/skill`),
   decay: (address: string) => request<DecayReport>(`${wallet(address)}/decay`),
+  leaderboard: (period: LeaderboardPeriod, category: string, orderBy: LeaderboardOrder) =>
+    request<Leaderboard>(`/leaderboard?${new URLSearchParams({ period, category, orderBy })}`),
 }

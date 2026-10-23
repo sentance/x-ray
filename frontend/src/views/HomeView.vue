@@ -36,6 +36,10 @@ const FEATURES = [
     <div class="mt-6">
       <WalletSearch />
     </div>
+    <p class="mt-3 text-sm text-slate-400">
+      No wallet in mind?
+      <RouterLink to="/leaderboard" class="text-sky-300 hover:text-sky-200">See who's winning now →</RouterLink>
+    </p>
 
     <ul class="mt-8 grid gap-3 sm:grid-cols-2">
       <li v-for="f in FEATURES" :key="f.title" class="rounded-lg border border-slate-800 bg-slate-900/60 p-4">

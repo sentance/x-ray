@@ -55,6 +55,41 @@ public class ActivityStatsRepository {
 		this.jdbc = jdbc;
 	}
 
+	/** The wallet's full-history aggregates; each one runs its query when called. */
+	public ActivityStats forWallet(String address) {
+		return new ActivityStats() {
+			@Override
+			public List<TypeTotal> typeTotals() {
+				return ActivityStatsRepository.this.typeTotals(address);
+			}
+
+			@Override
+			public Timing timing() {
+				return ActivityStatsRepository.this.timing(address);
+			}
+
+			@Override
+			public List<Bucket> entryPriceBuckets() {
+				return ActivityStatsRepository.this.entryPriceBuckets(address);
+			}
+
+			@Override
+			public List<Bucket> timeToExpiryBuckets() {
+				return ActivityStatsRepository.this.timeToExpiryBuckets(address);
+			}
+
+			@Override
+			public Double medianSecondsToExpiry() {
+				return ActivityStatsRepository.this.medianSecondsToExpiry(address);
+			}
+
+			@Override
+			public SizePercentiles tradeSizes() {
+				return ActivityStatsRepository.this.tradeSizes(address);
+			}
+		};
+	}
+
 	public List<MarketFlows> marketFlows(String address) {
 		return jdbc.query("""
 				SELECT a.condition_id, max(a.slug) AS slug, max(a.title) AS title, m.category, m.closed,

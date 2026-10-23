@@ -2,13 +2,22 @@ package com.xray.market;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class MarketRepository {
+
+	/** What we know about a market from earlier enrichment; any field may still be null. */
+	public record KnownMarket(String conditionId, String category, Instant endDate, Boolean closed,
+			Integer winningOutcomeIndex) {
+	}
 
 	public record MarketUpdate(String conditionId, String category, List<String> tags, Instant endDate, Boolean closed,
 			Integer winningOutcomeIndex, Boolean negRisk) {
@@ -18,6 +27,23 @@ public class MarketRepository {
 
 	public MarketRepository(JdbcTemplate jdbc) {
 		this.jdbc = jdbc;
+	}
+
+	public Map<String, KnownMarket> find(Collection<String> conditionIds) {
+		if (conditionIds.isEmpty()) {
+			return Map.of();
+		}
+		return jdbc.query("""
+				SELECT condition_id, category, end_date, closed, winning_outcome_index FROM market
+				WHERE condition_id = ANY(?)""",
+				ps -> ps.setArray(1, ps.getConnection().createArrayOf("text", conditionIds.toArray())), (rs, i) -> {
+					Timestamp end = rs.getTimestamp("end_date");
+					return new KnownMarket(rs.getString("condition_id"), rs.getString("category"),
+							end == null ? null : end.toInstant(), (Boolean) rs.getObject("closed"),
+							(Integer) rs.getObject("winning_outcome_index"));
+				})
+			.stream()
+			.collect(Collectors.toMap(KnownMarket::conditionId, Function.identity()));
 	}
 
 	/** Creates placeholder rows for every market the wallet traded that we have not seen yet. */

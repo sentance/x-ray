@@ -8,6 +8,10 @@ spring:
     url: jdbc:postgresql://localhost:5433/xray
     username: xray
     password: xray
+    hikari:
+      # Parallel workers exchange data through /dev/shm, which is Docker's default 64 MB in the shared
+      # Postgres container; big per-wallet aggregations overflowed it ("could not resize shared memory segment").
+      connection-init-sql: SET max_parallel_workers_per_gather = 0
   mvc:
     async:
       request-timeout: 300s

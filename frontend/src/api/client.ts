@@ -1,4 +1,5 @@
 import type {
+  BinanceStatus,
   DecayReport,
   Leaderboard,
   LeaderboardOrder,
@@ -43,6 +44,8 @@ export const api = {
   strategy: (address: string) => request<StrategyReport>(`${wallet(address)}/strategy`),
   skill: (address: string) => request<SkillReport>(`${wallet(address)}/skill`),
   decay: (address: string) => request<DecayReport>(`${wallet(address)}/decay`),
+  binanceStatus: (address: string) => request<BinanceStatus>(`${wallet(address)}/binance`),
+  startBinance: (address: string) => request<BinanceStatus>(`${wallet(address)}/binance`, { method: 'POST' }),
   leaderboard: (period: LeaderboardPeriod, category: string, orderBy: LeaderboardOrder) =>
     request<Leaderboard>(`/leaderboard?${new URLSearchParams({ period, category, orderBy })}`),
 }

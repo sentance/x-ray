@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.xray.market.MarketCategory;
@@ -35,6 +36,9 @@ public final class MarketTypes {
 	private static final Pattern HOURLY_UP_DOWN = Pattern.compile("up-or-down-.*-\\d{1,2}(am|pm)");
 
 	private static final Pattern UP_DOWN = Pattern.compile("updown|up-or-down");
+
+	/** Short Up/Down slugs end in the epoch second their window opens, e.g. {@code btc-updown-5m-1791228000}. */
+	private static final Pattern WINDOW_START = Pattern.compile("updown-\\d+m-(\\d{9,11})$");
 
 	private static final Pattern RANGE = Pattern.compile("be-between|price-of-.*-be-");
 
@@ -84,6 +88,15 @@ public final class MarketTypes {
 			return SPREAD_TOTAL.matcher(s).find() ? SPORTS_SPREAD_TOTAL : SPORTS_MATCH;
 		}
 		return category == null ? MarketCategory.OTHER : category;
+	}
+
+	/** When a short Up/Down market's window opened (epoch seconds); its strike is the price at that moment. */
+	public static Optional<Long> windowStart(String slug) {
+		if (slug == null) {
+			return Optional.empty();
+		}
+		Matcher m = WINDOW_START.matcher(slug.toLowerCase(Locale.ROOT));
+		return m.find() ? Optional.of(Long.parseLong(m.group(1))) : Optional.empty();
 	}
 
 	/** The Binance spot symbol of a crypto market's underlying asset, if recognisable. */

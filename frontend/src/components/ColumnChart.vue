@@ -15,6 +15,8 @@ const props = withDefaults(
     valueLabel: string
     polarity?: boolean
     height?: string
+    /** A horizontal reference line, e.g. the 50% a coin flip would score. */
+    reference?: { value: number; label: string }
   }>(),
   { polarity: false, height: 'h-56' },
 )
@@ -55,6 +57,15 @@ const option = computed(() => ({
         }
       }),
       emphasis: { itemStyle: { opacity: 0.85 } },
+      markLine: props.reference
+        ? {
+            silent: true,
+            symbol: 'none',
+            lineStyle: { color: chart.muted, width: 1, type: 'solid' },
+            label: { color: chart.muted, fontSize: 10, position: 'insideEndTop', formatter: props.reference.label },
+            data: [{ yAxis: props.reference.value }],
+          }
+        : undefined,
     },
   ],
 }))

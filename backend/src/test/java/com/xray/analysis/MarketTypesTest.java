@@ -43,4 +43,12 @@ class MarketTypesTest {
 		assertThat(MarketTypes.binanceSymbol("xrp-above-2pt5-on-april-3")).contains("XRPUSDT");
 		assertThat(MarketTypes.binanceSymbol("nba-den-okc")).isEmpty();
 	}
+
+	@Test
+	void upDownWindowStartComesFromTheSlug() {
+		assertThat(MarketTypes.windowStart("btc-updown-5m-1791228000")).contains(1791228000L);
+		assertThat(MarketTypes.windowStart("eth-updown-15m-1792718100")).contains(1792718100L);
+		assertThat(MarketTypes.windowStart("bitcoin-up-or-down-october-23-3pm-et")).isEmpty();
+		assertThat(MarketTypes.windowStart(null)).isEmpty();
+	}
 }

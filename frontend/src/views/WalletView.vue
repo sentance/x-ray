@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useWalletReports } from '@/composables/useWalletReports'
 import { ago, cents, date, num, shortAddress, usd, walletName } from '@/lib/format'
+import BinanceSection from '@/components/BinanceSection.vue'
 import Card from '@/components/Card.vue'
 import ColumnChart from '@/components/ColumnChart.vue'
 import DecaySection from '@/components/DecaySection.vue'
@@ -18,6 +19,14 @@ const address = computed(() => props.address.toLowerCase())
 const { status, overview, pnl, strategy, skill, decay, error, loadingReports, refresh } = useWalletReports(address)
 
 const job = computed(() => status.value?.job ?? null)
+// The Binance test needs crypto buys; it runs by itself for wallets whose labels point at crypto price trading.
+const hasCrypto = computed(() => strategy.value?.profile.cryptoAssets.some((s) => s.volume > 0) ?? false)
+const cryptoTrader = computed(
+  () =>
+    strategy.value?.classification.labels.some((l) =>
+      ['Crypto latency trader', 'Crypto price-ladder trader'].includes(l.name),
+    ) ?? false,
+)
 const running = computed(() => job.value?.status === 'RUNNING')
 const wallet = computed(() => overview.value?.wallet ?? status.value?.wallet ?? null)
 const name = computed(() =>
@@ -132,6 +141,7 @@ const tiles = computed(() => {
 
     <DecaySection v-if="decay" :report="decay" />
     <SkillSection v-if="skill" :report="skill" />
+    <BinanceSection v-if="hasCrypto" :address="address" :auto-run="cryptoTrader" />
     <StrategySection v-if="strategy" :report="strategy" />
 
     <p v-if="!status && !error" class="text-sm text-slate-500">Loading…</p>

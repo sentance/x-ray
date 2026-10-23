@@ -2,6 +2,7 @@ package com.xray.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,6 +12,8 @@ import com.xray.analysis.AnalysisService.StrategyReport;
 import com.xray.analysis.DecayAnalyzer.DecayReport;
 import com.xray.analysis.PnlAnalyzer.PnlReport;
 import com.xray.analysis.SkillAnalyzer.SkillReport;
+import com.xray.binance.BinanceLagService;
+import com.xray.binance.BinanceLagService.Status;
 
 @RestController
 @RequestMapping("/api/wallets/{address}")
@@ -18,8 +21,11 @@ public class AnalysisController {
 
 	private final AnalysisService analysis;
 
-	public AnalysisController(AnalysisService analysis) {
+	private final BinanceLagService binanceLag;
+
+	public AnalysisController(AnalysisService analysis, BinanceLagService binanceLag) {
 		this.analysis = analysis;
+		this.binanceLag = binanceLag;
 	}
 
 	@GetMapping("/overview")
@@ -45,5 +51,15 @@ public class AnalysisController {
 	@GetMapping("/decay")
 	public DecayReport decay(@PathVariable String address) {
 		return analysis.decay(AddressResolver.requireAddress(address));
+	}
+
+	@GetMapping("/binance")
+	public Status binance(@PathVariable String address) {
+		return binanceLag.status(AddressResolver.requireAddress(address));
+	}
+
+	@PostMapping("/binance")
+	public Status startBinance(@PathVariable String address) {
+		return binanceLag.start(AddressResolver.requireAddress(address));
 	}
 }

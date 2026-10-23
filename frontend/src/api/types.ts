@@ -247,3 +247,36 @@ export interface Leaderboard {
   rows: LeaderboardRow[]
   pending: number
 }
+
+export interface BinanceWindow {
+  label: string
+  when: 'BEFORE' | 'SINCE_OPEN' | 'AFTER'
+  minutes: number
+  trades: number
+  aligned: number
+  /** Share of buys whose bet direction matches the spot move in this window. */
+  alignedShare: number
+  alignedVolumeShare: number
+  /** Average spot move in the bet's direction, in basis points. */
+  meanSignedMoveBps: number
+  pValue: number
+}
+
+export interface BinanceReport {
+  cryptoBuys: number
+  directionalBuys: number
+  symbols: string[]
+  windows: BinanceWindow[]
+  verdict: string
+  explanation: string
+  fromTs: number | null
+  toTs: number | null
+}
+
+export interface BinanceStatus {
+  state: 'NONE' | 'RUNNING' | 'DONE' | 'FAILED'
+  chunksDone: number
+  chunksNeeded: number
+  report: BinanceReport | null
+  error: string | null
+}

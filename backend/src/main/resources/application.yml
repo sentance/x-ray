@@ -5,7 +5,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/xray
+    url: jdbc:postgresql://localhost:5433/xray
     username: xray
     password: xray
   mvc:

@@ -1,47 +1,33 @@
-# Coolify (Docker Compose build pack) for xray.aragorn.fyi. Coolify builds both images from this repo
+# Coolify (Docker Compose build pack) for x-ray.aragorn.fyi. Coolify builds both images from this repo
 # on every push to main. The edge proxy (github.com/sentance/edge-proxy) reaches the app privately as
 # xray-web:80 on the shared coolify network, so nothing is published on the host and
 # docker_compose_domains stays empty.
 #
-# Service names are prefixed on purpose: generic names like `backend` collide with other apps' aliases
-# on the shared coolify network. Only xray-web joins that network; the backend and database stay on
-# the app's private network.
+# The database is the platform's shared-postgres (database and role `xray`), reached over the coolify
+# network. Service names are prefixed on purpose: generic names like `backend` collide with other
+# apps' aliases on that shared network.
 #
 # Build contexts are relative to the repo root, as Coolify resolves them. To try it locally:
-#   POSTGRES_PASSWORD=x docker compose --project-directory . -f deploy/coolify/docker-compose.yml config
+#   docker compose --project-directory . -f deploy/coolify/docker-compose.yml config
 #
-# Coolify environment variables: POSTGRES_PASSWORD (required), ANTHROPIC_API_KEY, XRAY_AI_MODEL.
+# Coolify environment variables (runtime only): DB_PASSWORD, ANTHROPIC_API_KEY, XRAY_AI_MODEL.
+# No `:?` guards: Coolify interpolates this file at build time too, without runtime-only values.
 services:
-  xray-postgres:
-    image: postgres:17-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: xray
-      POSTGRES_USER: xray
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
-    volumes:
-      - xray-pgdata:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U xray -d xray"]
-      interval: 5s
-      timeout: 5s
-      retries: 10
-
   xray-backend:
     build:
       context: ./backend
     restart: unless-stopped
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://xray-postgres:5432/xray
-      SPRING_DATASOURCE_USERNAME: xray
-      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:?}
+      SPRING_DATASOURCE_URL: jdbc:postgresql://${DB_HOST:-shared-postgres}:5432/${DB_NAME:-xray}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME:-xray}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       XRAY_AI_MODEL: ${XRAY_AI_MODEL:-claude-opus-5-5}
     expose:
       - "8080"
-    depends_on:
-      xray-postgres:
-        condition: service_healthy
+    networks:
+      - default
+      - coolify
     healthcheck:
       # The temurin JRE image has no curl/wget; bash's /dev/tcp is enough to read the health status.
       test: ["CMD", "bash", "-c", "exec 3<>/dev/tcp/127.0.0.1/8080 && printf 'GET /actuator/health HTTP/1.0\\r\\n\\r\\n' >&3 && grep -q '\"UP\"' <&3"]
@@ -69,9 +55,6 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-
-volumes:
-  xray-pgdata:
 
 networks:
   coolify:

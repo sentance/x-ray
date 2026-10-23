@@ -1,0 +1,34 @@
+name: Deploy
+# Coolify builds deploy/coolify/docker-compose.yml from the pushed commit; this workflow only asks it to
+# deploy and waits for the result. (The Coolify GitHub App webhook can't reach the instance: it sits
+# behind the edge proxy without an instance FQDN.)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tell Coolify to deploy
+        id: queue
+        run: |
+          r=$(curl -fsS -X POST -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" -H 'Content-Type: application/json' \
+            "${{ vars.COOLIFY_URL }}/api/v1/deploy" -d '{"uuid":"${{ vars.COOLIFY_APP_UUID }}"}')
+          echo "$r"
+          echo "uuid=$(echo "$r" | jq -r '.deployments[0].deployment_uuid')" >> "$GITHUB_OUTPUT"
+      - name: Wait for the deployment
+        run: |
+          for i in $(seq 1 60); do
+            s=$(curl -fsS -H "Authorization: Bearer ${{ secrets.COOLIFY_API_TOKEN }}" \
+              "${{ vars.COOLIFY_URL }}/api/v1/deployments/${{ steps.queue.outputs.uuid }}" | jq -r .status)
+            case "$s" in
+              finished) echo "Deployed."; exit 0 ;;
+              failed|cancelled*) echo "Deployment $s; check the deployment log in Coolify." && exit 1 ;;
+            esac
+            echo "Waiting ($i/60): $s"; sleep 15
+          done
+          echo "Deployment did not finish within 15 minutes." && exit 1

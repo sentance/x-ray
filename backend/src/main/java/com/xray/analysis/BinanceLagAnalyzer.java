@@ -18,9 +18,11 @@ public class BinanceLagAnalyzer {
 
 	/**
 	 * @param direction +1 if the buy bets on the price rising, -1 if on it falling
+	 * @param shares outcome shares bought; weights are in shares, not dollars, because the side spot has moved
+	 * toward costs more per share, so dollar weights would lean "aligned" even for a trader buying both sides evenly
 	 * @param windowStartTs epoch seconds an Up/Down market's window opened (its strike is the price then), or null
 	 */
-	public record CryptoBuy(long ts, String symbol, int direction, double usdc, Long windowStartTs) {
+	public record CryptoBuy(long ts, String symbol, int direction, double shares, Long windowStartTs) {
 	}
 
 	/** Opening price of the 1-minute candle at {@code minuteMs}, or null if unknown. */
@@ -35,11 +37,26 @@ public class BinanceLagAnalyzer {
 
 	/**
 	 * @param alignedShare share of buys whose bet direction matches the spot move in this window
-	 * @param meanSignedMoveBps average spot move in the bet's direction, in basis points
 	 * @param pValue chance a coin-flipper lines up at least this often
+	 * @param sharesAligned the same, weighted by shares bought
+	 * @param sharesPValue chance of a weighted alignment this high if each buy's side were a coin flip
+	 * @param meanSignedMoveBps average spot move in the bet's direction, in basis points
 	 */
 	public record Window(String label, When when, int minutes, long trades, long aligned, double alignedShare,
-			double alignedVolumeShare, double meanSignedMoveBps, double pValue) {
+			double pValue, double sharesAligned, double sharesPValue, double meanSignedMoveBps) {
+
+		/** Lines up with spot clearly more often than chance, by count or by shares. */
+		boolean beats(double share) {
+			return (alignedShare >= share && pValue < SIGNIFICANT) || (sharesAligned >= share && sharesPValue < SIGNIFICANT);
+		}
+
+		/** Whichever measure makes the stronger case, for the explanation. */
+		String strongest() {
+			return sharesPValue < pValue
+					? "%s of the shares it buys (%s of its %d buys)".formatted(pct(sharesAligned), pct(alignedShare),
+							trades)
+					: "%s of %d buys".formatted(pct(alignedShare), trades);
+		}
 	}
 
 	public record BinanceReport(long cryptoBuys, long directionalBuys, List<String> symbols, List<Window> windows,
@@ -82,22 +99,22 @@ public class BinanceLagAnalyzer {
 			explanation = "Only %d directional crypto buys could be matched to Binance prices; the test needs %d."
 				.formatted(lead.trades(), MIN_TRADES);
 		}
-		else if (lead.alignedShare() >= LAG_SHARE && lead.pValue() < SIGNIFICANT) {
+		else if (lead.beats(LAG_SHARE)) {
 			verdict = "Trades after spot moves";
-			explanation = ("Buys the side Binance spot has already moved toward in %s of %d buys (%s; a coin flip "
-					+ "gets 50%%). It reacts to spot before Polymarket's odds catch up.")
-				.formatted(pct(lead.alignedShare()), lead.trades(), lead.label().toLowerCase());
+			explanation = ("Puts %s on the side Binance spot has already moved toward (%s; a coin flip gets 50%%). "
+					+ "It reacts to spot before Polymarket's odds catch up.")
+				.formatted(lead.strongest(), lead.label().toLowerCase());
 		}
-		else if (after5.trades() >= MIN_TRADES && after5.alignedShare() >= LEAD_SHARE
-				&& after5.pValue() < SIGNIFICANT) {
+		else if (after5.trades() >= MIN_TRADES && after5.beats(LEAD_SHARE)) {
 			verdict = "Ahead of spot";
-			explanation = "Its buys point the way spot moves over the next 5 minutes in %s of %d buys: it predicts moves rather than following them."
-				.formatted(pct(after5.alignedShare()), after5.trades());
+			explanation = "Puts %s on the side spot moves toward over the next 5 minutes: it predicts moves rather than following them."
+				.formatted(after5.strongest());
 		}
 		else {
 			verdict = "No lag pattern";
-			explanation = "Its buys line up with spot's prior move in %s of %d buys (%s), close to a coin flip, so it is not simply following Binance."
-				.formatted(pct(lead.alignedShare()), lead.trades(), lead.label().toLowerCase());
+			explanation = ("Its buys line up with spot's prior move in %s of %d buys and %s of shares (%s), close to "
+					+ "a coin flip, so it is not simply following Binance.")
+				.formatted(pct(lead.alignedShare()), lead.trades(), pct(lead.sharesAligned()), lead.label().toLowerCase());
 		}
 		return new BinanceReport(cryptoBuys.size(), buys.size(),
 				buys.stream().map(CryptoBuy::symbol).distinct().sorted().toList(), windows, verdict, explanation,
@@ -108,8 +125,9 @@ public class BinanceLagAnalyzer {
 	private static Window window(String label, When when, int minutes, List<CryptoBuy> buys, Prices prices) {
 		long n = 0;
 		long aligned = 0;
-		double volume = 0;
-		double alignedVolume = 0;
+		double shares = 0;
+		double alignedShares = 0;
+		double sumSquares = 0;
 		double signedMoveSum = 0;
 		for (CryptoBuy b : buys) {
 			Double move = move(b, when, minutes, prices);
@@ -118,15 +136,20 @@ public class BinanceLagAnalyzer {
 			}
 			double signed = b.direction() * move;
 			n++;
-			volume += b.usdc();
+			shares += b.shares();
+			sumSquares += b.shares() * b.shares();
 			signedMoveSum += signed;
 			if (signed > 0) {
 				aligned++;
-				alignedVolume += b.usdc();
+				alignedShares += b.shares();
 			}
 		}
-		return new Window(label, when, minutes, n, aligned, Stats.safeDiv(aligned, n), Stats.safeDiv(alignedVolume, volume),
-				n == 0 ? 0 : signedMoveSum / n * 10_000, Stats.binomialUpperTail((int) n, (int) aligned));
+		// Weighted sign test: under random sides, sum(w * ±1) has mean 0 and variance sum(w²).
+		double weightedSum = 2 * alignedShares - shares;
+		double sharesP = sumSquares > 0 ? Stats.normalUpperTail(weightedSum / Math.sqrt(sumSquares)) : 1;
+		return new Window(label, when, minutes, n, aligned, Stats.safeDiv(aligned, n),
+				Stats.binomialUpperTail((int) n, (int) aligned), Stats.safeDiv(alignedShares, shares), sharesP,
+				n == 0 ? 0 : signedMoveSum / n * 10_000);
 	}
 
 	/** Relative spot move over the window, or null if a price is missing or the window doesn't apply. */

@@ -184,7 +184,7 @@ public class BinanceLagService {
 		for (TradeRow t : activityStats.cryptoBuys(address)) {
 			Optional<String> symbol = MarketTypes.binanceSymbol(t.slug());
 			if (symbol.isPresent()) {
-				buys.add(new CryptoBuy(t.ts(), symbol.get(), MarketTypes.direction(t.slug(), t.outcome()), t.usdc(),
+				buys.add(new CryptoBuy(t.ts(), symbol.get(), MarketTypes.direction(t.slug(), t.outcome()), t.shares(),
 						MarketTypes.windowStart(t.slug()).orElse(null)));
 			}
 		}

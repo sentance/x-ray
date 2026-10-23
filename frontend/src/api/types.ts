@@ -256,10 +256,12 @@ export interface BinanceWindow {
   aligned: number
   /** Share of buys whose bet direction matches the spot move in this window. */
   alignedShare: number
-  alignedVolumeShare: number
+  pValue: number
+  /** The same, weighted by shares bought. */
+  sharesAligned: number
+  sharesPValue: number
   /** Average spot move in the bet's direction, in basis points. */
   meanSignedMoveBps: number
-  pValue: number
 }
 
 export interface BinanceReport {

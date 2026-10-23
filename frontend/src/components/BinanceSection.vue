@@ -4,7 +4,7 @@ import { api } from '@/api/client'
 import type { BinanceStatus } from '@/api/types'
 import { date, num, pValue, pct } from '@/lib/format'
 import Card from './Card.vue'
-import ColumnChart from './ColumnChart.vue'
+import AlignmentChart from './AlignmentChart.vue'
 import VerdictBadge from './VerdictBadge.vue'
 
 const POLL_MS = 3_000
@@ -63,8 +63,6 @@ onBeforeUnmount(() => {
 
 const report = computed(() => status.value?.report ?? null)
 const chartWindows = computed(() => (report.value?.windows ?? []).filter((w) => w.trades > 0))
-const shortLabel = (label: string) =>
-  label === 'Since the window opened' ? 'since open' : label.replace(' min before', 'm before').replace(' min after', 'm after')
 </script>
 
 <template>
@@ -121,26 +119,18 @@ const shortLabel = (label: string) =>
       <div v-if="chartWindows.length" class="mt-4 grid gap-6 lg:grid-cols-2">
         <div>
           <h3 class="mb-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-            Buys in the direction spot moved
+            Bets in the direction spot moved
           </h3>
-          <ColumnChart
-            :labels="chartWindows.map((w) => shortLabel(w.label))"
-            :values="chartWindows.map((w) => w.alignedShare)"
-            :format="(v) => pct(v)"
-            value-label="of buys aligned with spot"
-            :reference="{ value: 0.5, label: 'coin flip' }"
-            height="h-52"
-          />
+          <AlignmentChart :windows="chartWindows" />
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
             <thead class="text-left text-xs text-slate-500">
               <tr>
                 <th class="pb-2 font-normal">Spot move</th>
-                <th class="pb-2 pl-3 text-right font-normal">Aligned</th>
-                <th class="hidden pb-2 pl-3 text-right font-normal sm:table-cell">By $</th>
-                <th class="pb-2 pl-3 text-right font-normal">Avg move</th>
-                <th class="pb-2 pl-3 text-right font-normal">p</th>
+                <th class="pb-2 pl-3 text-right font-normal">By buys</th>
+                <th class="pb-2 pl-3 text-right font-normal">By shares</th>
+                <th class="hidden pb-2 pl-3 text-right font-normal sm:table-cell">Avg move</th>
               </tr>
             </thead>
             <tbody class="tabular-nums">
@@ -148,17 +138,22 @@ const shortLabel = (label: string) =>
                 <td class="py-2 text-slate-300">
                   {{ w.label }} <span class="text-xs text-slate-500">· {{ num(w.trades) }}</span>
                 </td>
-                <td class="whitespace-nowrap py-2 pl-3 text-right text-slate-100">
-                  {{ w.trades ? pct(w.alignedShare) : '—' }}
+                <td class="whitespace-nowrap py-2 pl-3 text-right">
+                  <template v-if="w.trades">
+                    <span class="text-slate-100">{{ pct(w.alignedShare) }}</span>
+                    <span class="block text-xs text-slate-500">p {{ pValue(w.pValue) }}</span>
+                  </template>
+                  <template v-else>—</template>
+                </td>
+                <td class="whitespace-nowrap py-2 pl-3 text-right">
+                  <template v-if="w.trades">
+                    <span class="text-slate-100">{{ pct(w.sharesAligned) }}</span>
+                    <span class="block text-xs text-slate-500">p {{ pValue(w.sharesPValue) }}</span>
+                  </template>
+                  <template v-else>—</template>
                 </td>
                 <td class="hidden whitespace-nowrap py-2 pl-3 text-right text-slate-400 sm:table-cell">
-                  {{ w.trades ? pct(w.alignedVolumeShare) : '—' }}
-                </td>
-                <td class="whitespace-nowrap py-2 pl-3 text-right text-slate-400">
                   {{ w.trades ? `${w.meanSignedMoveBps >= 0 ? '+' : '−'}${Math.abs(w.meanSignedMoveBps).toFixed(1)} bp` : '—' }}
-                </td>
-                <td class="whitespace-nowrap py-2 pl-3 text-right text-slate-400">
-                  {{ w.trades ? pValue(w.pValue) : '—' }}
                 </td>
               </tr>
             </tbody>
@@ -166,8 +161,10 @@ const shortLabel = (label: string) =>
         </div>
       </div>
       <p class="mt-3 text-xs text-slate-500">
-        Uses 1-minute candles, so the trade's own minute is left out: moves within seconds of a trade, where the
-        fastest bots act, aren't visible. Up/Down markets settle on Chainlink prices, which track Binance closely.
+        "By shares" weighs each buy by the shares bought, not dollars: the side spot has moved toward costs more per
+        share, so dollar weights would look aligned even for a trader buying both sides evenly. Uses 1-minute candles,
+        so the trade's own minute is left out and moves within seconds of a trade aren't visible. Up/Down markets
+        settle on Chainlink prices, which track Binance closely.
       </p>
     </template>
   </Card>

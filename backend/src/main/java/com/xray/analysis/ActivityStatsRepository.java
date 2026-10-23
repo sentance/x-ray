@@ -49,7 +49,7 @@ public class ActivityStatsRepository {
 	public record Timing(long[] hourOfDay, long[] dayOfWeek, long activeDays, Double medianGapSeconds) {
 	}
 
-	public record TradeRow(long ts, String slug, String outcome, double usdc) {
+	public record TradeRow(long ts, String slug, String outcome, double shares) {
 	}
 
 	private final JdbcTemplate jdbc;
@@ -132,11 +132,11 @@ public class ActivityStatsRepository {
 	/** Buys in markets whose slug names a coin Binance lists; the caller still checks the slug properly. */
 	public List<TradeRow> cryptoBuys(String address) {
 		return jdbc.query("""
-				SELECT ts, slug, outcome, coalesce(usdc_size, 0) AS usdc FROM activity
+				SELECT ts, slug, outcome, coalesce(size, 0) AS shares FROM activity
 				WHERE address = ? AND type = 'TRADE' AND side = 'BUY'
 				  AND slug ~ '(^|-)(btc|bitcoin|eth|ethereum|sol|solana|xrp|doge|dogecoin|bnb)(-|$)'
 				ORDER BY ts""", (rs, i) -> new TradeRow(rs.getLong("ts"), rs.getString("slug"),
-				rs.getString("outcome"), rs.getDouble("usdc")), address);
+				rs.getString("outcome"), rs.getDouble("shares")), address);
 	}
 
 	public List<TypeTotal> typeTotals(String address) {

@@ -11,6 +11,8 @@ use([CanvasRenderer, LineChart, BarChart, GridComponent, TooltipComponent, MarkL
 export const chart = {
   surface: '#0f172a',
   series: '#3987e5',
+  /** Second categorical slot (validated next to series on the card surface). */
+  series2: '#d95926',
   gain: '#3987e5',
   loss: '#e66767',
   textPrimary: '#f0efec',

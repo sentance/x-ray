@@ -65,6 +65,23 @@ class BinanceLagAnalyzerTest {
 	}
 
 	@Test
+	void shareWeightingCatchesBigBetsThatFollowSpot() {
+		// Spot rises. Half the buys bet Up with 100 shares, half bet Down with 1 share: a coin flip by count only.
+		List<CryptoBuy> buys = new ArrayList<>();
+		for (int i = 0; i < 100; i++) {
+			buys.add(new CryptoBuy(T0 + i * 600L + 120, "BTCUSDT", i % 2 == 0 ? 1 : -1, i % 2 == 0 ? 100 : 1, null));
+		}
+		BinanceReport r = analyzer.analyze(buys, prices(m -> 100 + m));
+
+		Window before1 = window(r, "1 min before");
+		assertThat(before1.alignedShare()).isEqualTo(0.5);
+		assertThat(before1.sharesAligned()).isCloseTo(100.0 / 101, within(1e-9));
+		assertThat(before1.sharesPValue()).isLessThan(1e-6);
+		assertThat(r.verdict()).isEqualTo("Trades after spot moves");
+		assertThat(r.explanation()).contains("of the shares it buys");
+	}
+
+	@Test
 	void flatOrUnknownPricesAreNotCounted() {
 		List<CryptoBuy> buys = List.of(new CryptoBuy(T0 + 3600, "SOLUSDT", 1, 1, null),
 				new CryptoBuy(T0 + 7200, "SOLUSDT", 0, 1, null));

@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gain: #16a34a;
+  --color-loss: #dc2626;
+}
+
+body {
+  @apply bg-slate-950 text-slate-200 antialiased;
+}

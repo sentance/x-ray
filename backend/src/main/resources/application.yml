@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: xray
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xray
+    username: xray
+    password: xray
+  mvc:
+    async:
+      request-timeout: 300s
+
+server:
+  port: 8080
+
+xray:
+  polymarket:
+    data-api: https://data-api.polymarket.com
+    gamma-api: https://gamma-api.polymarket.com
+    requests-per-second: 8
+  binance:
+    base-url: https://data-api.binance.vision
+    requests-per-second: 5
+  sync:
+    max-concurrent-wallets: 3
+  ai:
+    api-key: ${ANTHROPIC_API_KEY:}
+    model: ${XRAY_AI_MODEL:claude-opus-5-5}
+  # Polymarket rule changes drawn as markers on the P&L chart.
+  # January/February dates are approximate (month-level); adjust when exact dates are known.
+  markers:
+    - date: 2026-01-01
+      label: Fees introduced (approx.)
+    - date: 2026-02-01
+      label: Order delay removed (approx.)
+    - date: 2026-03-30
+      label: New fee curve

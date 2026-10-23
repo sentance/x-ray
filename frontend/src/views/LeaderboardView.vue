@@ -215,7 +215,7 @@ function displayName(row: LeaderboardRow): string {
                   >{{ displayName(row).charAt(0).toUpperCase() }}</span
                 >
                 <span class="min-w-0">
-                  <span class="block max-w-[14rem] truncate font-medium text-slate-100 hover:text-sky-300">{{
+                  <span class="block max-w-56 truncate font-medium text-slate-100 hover:text-sky-300">{{
                     displayName(row)
                   }}</span>
                   <span class="block font-mono text-xs text-slate-500">{{ shortAddress(row.address) }}</span>

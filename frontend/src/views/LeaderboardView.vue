@@ -105,7 +105,7 @@ function displayName(row: LeaderboardRow): string {
     <header>
       <h1 class="text-2xl font-semibold text-slate-50">Who's winning now</h1>
       <p class="mt-1 text-slate-400">
-        Polymarket's top {{ rows.length || 50 }} wallets, tagged by the strategy they appear to run.
+        Polymarket's top {{ board?.rows.length || 50 }} wallets, tagged by the strategy they appear to run.
       </p>
     </header>
 

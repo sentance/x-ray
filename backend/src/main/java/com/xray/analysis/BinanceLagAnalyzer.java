@@ -53,9 +53,9 @@ public class BinanceLagAnalyzer {
 		/** Whichever measure makes the stronger case, for the explanation. */
 		String strongest() {
 			return sharesPValue < pValue
-					? "%s of the shares it buys (%s of its %d buys)".formatted(pct(sharesAligned), pct(alignedShare),
+					? "%s of the shares it buys (%s of its %,d buys)".formatted(pct(sharesAligned), pct(alignedShare),
 							trades)
-					: "%s of %d buys".formatted(pct(alignedShare), trades);
+					: "%s of %,d buys".formatted(pct(alignedShare), trades);
 		}
 	}
 
@@ -96,7 +96,7 @@ public class BinanceLagAnalyzer {
 		String explanation;
 		if (lead.trades() < MIN_TRADES) {
 			verdict = "Not enough data";
-			explanation = "Only %d directional crypto buys could be matched to Binance prices; the test needs %d."
+			explanation = "Only %,d directional crypto buys could be matched to Binance prices; the test needs %d."
 				.formatted(lead.trades(), MIN_TRADES);
 		}
 		else if (lead.beats(LAG_SHARE)) {
@@ -112,7 +112,7 @@ public class BinanceLagAnalyzer {
 		}
 		else {
 			verdict = "No lag pattern";
-			explanation = ("Its buys line up with spot's prior move in %s of %d buys and %s of shares (%s), close to "
+			explanation = ("Its buys line up with spot's prior move in %s of %,d buys and %s of shares (%s), close to "
 					+ "a coin flip, so it is not simply following Binance.")
 				.formatted(pct(lead.alignedShare()), lead.trades(), pct(lead.sharesAligned()), lead.label().toLowerCase());
 		}

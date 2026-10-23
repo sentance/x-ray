@@ -63,6 +63,12 @@ onBeforeUnmount(() => {
 
 const report = computed(() => status.value?.report ?? null)
 const chartWindows = computed(() => (report.value?.windows ?? []).filter((w) => w.trades > 0))
+
+/** Signed basis points, without a "−0.0" for moves that round to zero. */
+function bp(v: number): string {
+  if (Math.abs(v) < 0.05) return '0.0 bp'
+  return `${v > 0 ? '+' : '−'}${Math.abs(v).toFixed(1)} bp`
+}
 </script>
 
 <template>
@@ -153,7 +159,7 @@ const chartWindows = computed(() => (report.value?.windows ?? []).filter((w) => 
                   <template v-else>—</template>
                 </td>
                 <td class="hidden whitespace-nowrap py-2 pl-3 text-right text-slate-400 sm:table-cell">
-                  {{ w.trades ? `${w.meanSignedMoveBps >= 0 ? '+' : '−'}${Math.abs(w.meanSignedMoveBps).toFixed(1)} bp` : '—' }}
+                  {{ w.trades ? bp(w.meanSignedMoveBps) : '—' }}
                 </td>
               </tr>
             </tbody>

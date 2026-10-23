@@ -13,10 +13,9 @@ const SERIES = [
   { name: 'by shares', color: chart.series2, value: (w: BinanceWindow) => w.sharesAligned },
 ]
 
-const shortLabel = (label: string) =>
-  label === 'Since the window opened'
-    ? 'since open'
-    : label.replace(' min before', 'm before').replace(' min after', 'm after')
+// Short enough for all seven to fit on a phone: −15m … open … +15m.
+const shortLabel = (w: BinanceWindow) =>
+  w.when === 'SINCE_OPEN' ? 'open' : `${w.when === 'BEFORE' ? '−' : '+'}${w.minutes}m`
 
 const option = computed(() => ({
   grid: { left: 8, right: 8, top: 16, bottom: 8, containLabel: true },
@@ -32,10 +31,10 @@ const option = computed(() => ({
   },
   xAxis: {
     type: 'category',
-    data: props.windows.map((w) => shortLabel(w.label)),
+    data: props.windows.map(shortLabel),
     axisLine: { lineStyle: { color: chart.axis } },
     axisTick: { show: false },
-    axisLabel,
+    axisLabel: { ...axisLabel, interval: 0 },
   },
   yAxis: {
     type: 'value',

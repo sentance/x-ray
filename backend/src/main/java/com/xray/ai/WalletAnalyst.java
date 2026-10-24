@@ -64,7 +64,7 @@ public class WalletAnalyst {
 			and NO together for less than the $1 payout; tradeSizes are USDC per trade.
 			- stillWorking: recent 30/60/90-day windows against lifetime.
 			- binanceTest, when present: whether crypto buys bet in the direction Binance spot moved before or after \
-			the trade; about 50% aligned is a coin flip.""";
+			the trade; about 50% aligned is a coin flip. When it is absent, don't mention it.""";
 
 	public static final String EXPLAIN = """
 			Explain how this wallet makes money. Cover, in order: what it does (its playbook in two or three \

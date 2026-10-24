@@ -10,7 +10,8 @@
 # Build contexts are relative to the repo root, as Coolify resolves them. To try it locally:
 #   docker compose --project-directory . -f deploy/coolify/docker-compose.yml config
 #
-# Coolify environment variables (runtime only): DB_PASSWORD, ANTHROPIC_API_KEY, XRAY_AI_MODEL.
+# Coolify environment variables (runtime only): DB_PASSWORD, ANTHROPIC_API_KEY, XRAY_AI_MODEL, and optionally
+# XRAY_AI_PER_IP_PER_HOUR / XRAY_AI_PER_HOUR (hourly caps on Claude requests).
 # No `:?` guards: Coolify interpolates this file at build time too, without runtime-only values.
 services:
   xray-backend:
@@ -23,6 +24,8 @@ services:
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       XRAY_AI_MODEL: ${XRAY_AI_MODEL:-claude-opus-5-5}
+      XRAY_AI_PER_IP_PER_HOUR: ${XRAY_AI_PER_IP_PER_HOUR:-20}
+      XRAY_AI_PER_HOUR: ${XRAY_AI_PER_HOUR:-200}
     expose:
       - "8080"
     networks:

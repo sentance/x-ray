@@ -36,6 +36,8 @@ xray:
   ai:
     api-key: ${ANTHROPIC_API_KEY:}
     model: ${XRAY_AI_MODEL:claude-opus-5-5}
+    chat-per-ip-per-hour: ${XRAY_AI_PER_IP_PER_HOUR:20}
+    requests-per-hour: ${XRAY_AI_PER_HOUR:200}
   # Polymarket rule changes drawn as markers on the P&L chart.
   # January/February dates are approximate (month-level); adjust when exact dates are known.
   markers:

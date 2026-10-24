@@ -17,7 +17,11 @@ public record XrayProperties(Polymarket polymarket, Binance binance, Sync sync, 
 	public record Sync(int maxConcurrentWallets) {
 	}
 
-	public record Ai(String apiKey, String model) {
+	/**
+	 * @param chatPerIpPerHour Claude requests (explanations and chat answers) one visitor may make per hour
+	 * @param requestsPerHour Claude requests across all visitors per hour, a ceiling on what the public site spends
+	 */
+	public record Ai(String apiKey, String model, int chatPerIpPerHour, int requestsPerHour) {
 
 		public boolean enabled() {
 			return apiKey != null && !apiKey.isBlank();

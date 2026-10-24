@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useWalletReports } from '@/composables/useWalletReports'
 import { ago, cents, date, num, shortAddress, usd, walletName } from '@/lib/format'
+import AskClaude from '@/components/AskClaude.vue'
 import BinanceSection from '@/components/BinanceSection.vue'
 import Card from '@/components/Card.vue'
 import ColumnChart from '@/components/ColumnChart.vue'
@@ -122,6 +123,8 @@ const tiles = computed(() => {
     <p v-else-if="loadingReports" class="rounded-xl border border-slate-800 bg-slate-900 p-4 text-sm text-slate-400">
       Working out the strategy summary… this takes a while on big wallets.
     </p>
+
+    <AskClaude v-if="overview" :address="address" :ready="!running && !!wallet?.lastSyncedAt" />
 
     <Card v-if="pnl" title="Cumulative P&L" subtitle="Daily, from Polymarket's P&L history · vertical lines mark rule changes">
       <PnlChart v-if="pnl.series.length" :series="pnl.series" :markers="pnl.markers" />

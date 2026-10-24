@@ -44,6 +44,7 @@ export const api = {
   strategy: (address: string) => request<StrategyReport>(`${wallet(address)}/strategy`),
   skill: (address: string) => request<SkillReport>(`${wallet(address)}/skill`),
   decay: (address: string) => request<DecayReport>(`${wallet(address)}/decay`),
+  narrative: (address: string) => request<{ enabled: boolean; text: string }>(`${wallet(address)}/narrative`),
   binanceStatus: (address: string) => request<BinanceStatus>(`${wallet(address)}/binance`),
   startBinance: (address: string) => request<BinanceStatus>(`${wallet(address)}/binance`, { method: 'POST' }),
   leaderboard: (period: LeaderboardPeriod, category: string, orderBy: LeaderboardOrder) =>

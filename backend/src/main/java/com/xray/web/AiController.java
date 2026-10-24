@@ -153,8 +153,9 @@ public class AiController {
 			finish(emitter, "error", Map.of("message", "Claude is busy right now; try again in a minute."));
 		}
 		catch (AnthropicServiceException e) {
+			// Details (billing, bad request) are for the operator's logs, not the visitor.
 			log.warn("Claude request failed: {}", e.getMessage());
-			finish(emitter, "error", Map.of("message", "Claude couldn't answer (" + e.statusCode() + ")."));
+			finish(emitter, "error", Map.of("message", "Ask Claude is unavailable right now; try again later."));
 		}
 		catch (Exception e) {
 			log.error("Claude stream failed", e);

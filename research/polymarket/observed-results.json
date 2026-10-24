@@ -1,0 +1,8 @@
+{
+  "book_capture": "research/polymarket/data/live/20261024T094131886970Z",
+  "diagnostic_only": true,
+  "eliminated_bin_proxies": 0,
+  "at_least_one_cent_per_share_margin": 0,
+  "rows": [],
+  "limitation": "Retrospective availability check, not paper fills. METAR observations are a proxy for NOAA's specified table; source corrections, time conventions, and quote latency remain unresolved. One snapshot cannot estimate opportunity frequency."
+}

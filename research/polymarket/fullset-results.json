@@ -1,0 +1,2365 @@
+{
+  "protocol": "research/polymarket/FULLSET_PROTOCOL.md",
+  "date": "2026-10-24",
+  "captured_at": "2026-10-24T10:17:21.460470+00:00",
+  "events_discovered": 49,
+  "supported_events": 48,
+  "excluded_events": [
+    {
+      "event": "highest-temperature-in-hong-kong-on-october-24-2026",
+      "reason": "unsupported resolution source"
+    }
+  ],
+  "book_errors": [],
+  "status_counts": {
+    "insufficient_depth": 5,
+    "margin_too_small": 43
+  },
+  "first_quote_candidates": 0,
+  "confirmed_quote_candidates": 0,
+  "baskets": [
+    {
+      "event": "highest-temperature-in-panama-city-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.46,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.4600000000000009,
+      "leg_costs": [
+        {
+          "market_id": "6041485",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041486",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041487",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041488",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041489",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6041490",
+          "cost": 0.14
+        },
+        {
+          "market_id": "6041491",
+          "cost": 0.39
+        },
+        {
+          "market_id": "6041492",
+          "cost": 2.3000000000000003
+        },
+        {
+          "market_id": "6041493",
+          "cost": 3.7
+        },
+        {
+          "market_id": "6041494",
+          "cost": 4.2
+        },
+        {
+          "market_id": "6041495",
+          "cost": 0.6
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-mexico-city-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.38,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.3800000000000008,
+      "leg_costs": [
+        {
+          "market_id": "6041474",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041475",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041476",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041477",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041478",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6041479",
+          "cost": 1.2
+        },
+        {
+          "market_id": "6041480",
+          "cost": 5.5
+        },
+        {
+          "market_id": "6041481",
+          "cost": 3.0
+        },
+        {
+          "market_id": "6041482",
+          "cost": 0.33999999999999997
+        },
+        {
+          "market_id": "6041483",
+          "cost": 0.18
+        },
+        {
+          "market_id": "6041484",
+          "cost": 0.03
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-toronto-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.84,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.8399999999999999,
+      "leg_costs": [
+        {
+          "market_id": "6041463",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041464",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041465",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041466",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041467",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6041468",
+          "cost": 1.6
+        },
+        {
+          "market_id": "6041469",
+          "cost": 6.8999999999999995
+        },
+        {
+          "market_id": "6041470",
+          "cost": 2.1
+        },
+        {
+          "market_id": "6041471",
+          "cost": 0.14
+        },
+        {
+          "market_id": "6041472",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041473",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-buenos-aires-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.0,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.0,
+      "leg_costs": [
+        {
+          "market_id": "6041452",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041453",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041454",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6041455",
+          "cost": 1.1
+        },
+        {
+          "market_id": "6041456",
+          "cost": 3.4000000000000004
+        },
+        {
+          "market_id": "6041457",
+          "cost": 3.5999999999999996
+        },
+        {
+          "market_id": "6041458",
+          "cost": 2.1500000000000004
+        },
+        {
+          "market_id": "6041459",
+          "cost": 0.51
+        },
+        {
+          "market_id": "6041460",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6041461",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6041462",
+          "cost": 0.07
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-sao-paulo-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.4037,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.4037000000000006,
+      "leg_costs": [
+        {
+          "market_id": "6041441",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041442",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041443",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6041444",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6041445",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6041446",
+          "cost": 0.6
+        },
+        {
+          "market_id": "6041447",
+          "cost": 1.5
+        },
+        {
+          "market_id": "6041448",
+          "cost": 3.45
+        },
+        {
+          "market_id": "6041449",
+          "cost": 3.4737
+        },
+        {
+          "market_id": "6041450",
+          "cost": 1.73
+        },
+        {
+          "market_id": "6041451",
+          "cost": 0.54
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-san-francisco-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.95,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.9499999999999993,
+      "leg_costs": [
+        {
+          "market_id": "6038982",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6038983",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6038984",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6038985",
+          "cost": 0.25
+        },
+        {
+          "market_id": "6038986",
+          "cost": 1.55
+        },
+        {
+          "market_id": "6038987",
+          "cost": 5.1
+        },
+        {
+          "market_id": "6038988",
+          "cost": 3.2
+        },
+        {
+          "market_id": "6038989",
+          "cost": 0.5
+        },
+        {
+          "market_id": "6038990",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6038991",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6038992",
+          "cost": 0.02
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-los-angeles-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.84,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.8399999999999999,
+      "leg_costs": [
+        {
+          "market_id": "6038969",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6038970",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6038971",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6038972",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6038973",
+          "cost": 0.14
+        },
+        {
+          "market_id": "6038974",
+          "cost": 0.37
+        },
+        {
+          "market_id": "6038975",
+          "cost": 3.8
+        },
+        {
+          "market_id": "6038976",
+          "cost": 5.4
+        },
+        {
+          "market_id": "6038977",
+          "cost": 0.95
+        },
+        {
+          "market_id": "6038978",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6038979",
+          "cost": 0.02
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-seattle-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.685,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.6850000000000005,
+      "leg_costs": [
+        {
+          "market_id": "6038957",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6038958",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6038959",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6038960",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6038961",
+          "cost": 1.9
+        },
+        {
+          "market_id": "6038962",
+          "cost": 4.8
+        },
+        {
+          "market_id": "6038963",
+          "cost": 3.0
+        },
+        {
+          "market_id": "6038964",
+          "cost": 0.655
+        },
+        {
+          "market_id": "6038965",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6038966",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6038967",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-houston-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.4398,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.43979999999999997,
+      "leg_costs": [
+        {
+          "market_id": "6037846",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037847",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037848",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037849",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6037850",
+          "cost": 4.2
+        },
+        {
+          "market_id": "6037851",
+          "cost": 5.5
+        },
+        {
+          "market_id": "6037852",
+          "cost": 0.6097999999999999
+        },
+        {
+          "market_id": "6037853",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037854",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037855",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037856",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-denver-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.361600000000001,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.361600000000001,
+      "leg_costs": [
+        {
+          "market_id": "6037835",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037836",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037837",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037838",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037839",
+          "cost": 0.15
+        },
+        {
+          "market_id": "6037840",
+          "cost": 7.9
+        },
+        {
+          "market_id": "6037841",
+          "cost": 2.8496
+        },
+        {
+          "market_id": "6037842",
+          "cost": 0.29200000000000004
+        },
+        {
+          "market_id": "6037843",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6037844",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037845",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-chicago-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.62,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.6199999999999992,
+      "leg_costs": [
+        {
+          "market_id": "6037824",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037825",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037826",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037827",
+          "cost": 0.18
+        },
+        {
+          "market_id": "6037828",
+          "cost": 1.3
+        },
+        {
+          "market_id": "6037829",
+          "cost": 6.3
+        },
+        {
+          "market_id": "6037830",
+          "cost": 2.7
+        },
+        {
+          "market_id": "6037831",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6037832",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6037833",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037834",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-miami-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.67,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.6699999999999999,
+      "leg_costs": [
+        {
+          "market_id": "6037813",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037814",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037815",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037816",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037817",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037818",
+          "cost": 0.43999999999999995
+        },
+        {
+          "market_id": "6037819",
+          "cost": 4.2
+        },
+        {
+          "market_id": "6037820",
+          "cost": 5.699999999999999
+        },
+        {
+          "market_id": "6037821",
+          "cost": 0.24
+        },
+        {
+          "market_id": "6037822",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037823",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-dallas-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.66,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.6600000000000001,
+      "leg_costs": [
+        {
+          "market_id": "6037802",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037803",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037804",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037805",
+          "cost": 0.2
+        },
+        {
+          "market_id": "6037806",
+          "cost": 3.4000000000000004
+        },
+        {
+          "market_id": "6037807",
+          "cost": 6.4
+        },
+        {
+          "market_id": "6037808",
+          "cost": 0.59
+        },
+        {
+          "market_id": "6037809",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037810",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037811",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037812",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-austin-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.95,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.9499999999999993,
+      "leg_costs": [
+        {
+          "market_id": "6037192",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037193",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037194",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037195",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6037196",
+          "cost": 1.1
+        },
+        {
+          "market_id": "6037197",
+          "cost": 7.5
+        },
+        {
+          "market_id": "6037198",
+          "cost": 2.1
+        },
+        {
+          "market_id": "6037199",
+          "cost": 0.15
+        },
+        {
+          "market_id": "6037200",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037201",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037202",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-atlanta-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.942499999999999,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.942499999999999,
+      "leg_costs": [
+        {
+          "market_id": "6037181",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037182",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037183",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6037184",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6037185",
+          "cost": 0.33
+        },
+        {
+          "market_id": "6037186",
+          "cost": 3.7
+        },
+        {
+          "market_id": "6037187",
+          "cost": 5.949999999999999
+        },
+        {
+          "market_id": "6037188",
+          "cost": 0.7000000000000001
+        },
+        {
+          "market_id": "6037189",
+          "cost": 0.08249999999999999
+        },
+        {
+          "market_id": "6037190",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6037191",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-nyc-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.95,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.9499999999999993,
+      "leg_costs": [
+        {
+          "market_id": "6037170",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037171",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037172",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6037173",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037174",
+          "cost": 0.13
+        },
+        {
+          "market_id": "6037175",
+          "cost": 1.2
+        },
+        {
+          "market_id": "6037176",
+          "cost": 6.8999999999999995
+        },
+        {
+          "market_id": "6037177",
+          "cost": 2.4
+        },
+        {
+          "market_id": "6037178",
+          "cost": 0.24
+        },
+        {
+          "market_id": "6037179",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6037180",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-manila-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.09,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.08999999999999986,
+      "leg_costs": [
+        {
+          "market_id": "6036221",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036222",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036223",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036224",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036225",
+          "cost": 9.99
+        },
+        {
+          "market_id": "6036226",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036227",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036228",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036229",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036230",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036231",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.21,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.21000000000000085,
+      "leg_costs": [
+        {
+          "market_id": "6036210",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036211",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036212",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036213",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036214",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036215",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036216",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036217",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6036218",
+          "cost": 0.13
+        },
+        {
+          "market_id": "6036219",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036220",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-qingdao-on-october-24-2026",
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-cape-town-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 13.33094,
+      "conditional_payout": 10,
+      "conditional_surplus": -3.33094,
+      "leg_costs": [
+        {
+          "market_id": "6036177",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036178",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036179",
+          "cost": 2.38094
+        },
+        {
+          "market_id": "6036180",
+          "cost": 5.58
+        },
+        {
+          "market_id": "6036181",
+          "cost": 4.3
+        },
+        {
+          "market_id": "6036182",
+          "cost": 0.75
+        },
+        {
+          "market_id": "6036183",
+          "cost": 0.26
+        },
+        {
+          "market_id": "6036184",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036185",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036186",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036187",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.440000000000001,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.4400000000000013,
+      "leg_costs": [
+        {
+          "market_id": "6036166",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036167",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036168",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036169",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036170",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036171",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036172",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6036173",
+          "cost": 0.07
+        },
+        {
+          "market_id": "6036174",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6036175",
+          "cost": 9.97
+        },
+        {
+          "market_id": "6036176",
+          "cost": 0.21999999999999997
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.15,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.15000000000000036,
+      "leg_costs": [
+        {
+          "market_id": "6036155",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036156",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036157",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036158",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036159",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036160",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036161",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6036162",
+          "cost": 9.99
+        },
+        {
+          "market_id": "6036163",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6036164",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036165",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-helsinki-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.330000000000002,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.3300000000000018,
+      "leg_costs": [
+        {
+          "market_id": "6036144",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036145",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036146",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036147",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036148",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036149",
+          "cost": 7.800000000000001
+        },
+        {
+          "market_id": "6036150",
+          "cost": 3.3000000000000003
+        },
+        {
+          "market_id": "6036151",
+          "cost": 0.14
+        },
+        {
+          "market_id": "6036152",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036153",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036154",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-amsterdam-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.902700000000001,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.9027000000000012,
+      "leg_costs": [
+        {
+          "market_id": "6036133",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036134",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036135",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036136",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036137",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036138",
+          "cost": 0.9050999999999999
+        },
+        {
+          "market_id": "6036139",
+          "cost": 7.9
+        },
+        {
+          "market_id": "6036140",
+          "cost": 1.9776
+        },
+        {
+          "market_id": "6036141",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6036142",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036143",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-busan-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.578879999999998,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.5788799999999981,
+      "leg_costs": [
+        {
+          "market_id": "6036122",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036123",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036124",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036125",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036126",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036127",
+          "cost": 8.399999999999999
+        },
+        {
+          "market_id": "6036128",
+          "cost": 1.6
+        },
+        {
+          "market_id": "6036129",
+          "cost": 0.48888
+        },
+        {
+          "market_id": "6036130",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036131",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036132",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-istanbul-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.44416,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.4441600000000001,
+      "leg_costs": [
+        {
+          "market_id": "6036111",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6036112",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036113",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036114",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036115",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036116",
+          "cost": 9.73
+        },
+        {
+          "market_id": "6036117",
+          "cost": 0.43416
+        },
+        {
+          "market_id": "6036118",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6036119",
+          "cost": 0.05
+        },
+        {
+          "market_id": "6036120",
+          "cost": 0.07
+        },
+        {
+          "market_id": "6036121",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.27,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.2699999999999996,
+      "leg_costs": [
+        {
+          "market_id": "6036100",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036101",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036102",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036103",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036104",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036105",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036106",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036107",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036108",
+          "cost": 4.8
+        },
+        {
+          "market_id": "6036109",
+          "cost": 4.2
+        },
+        {
+          "market_id": "6036110",
+          "cost": 2.17
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.15,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.15000000000000036,
+      "leg_costs": [
+        {
+          "market_id": "6036089",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036090",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036091",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036092",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036093",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036094",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036095",
+          "cost": 9.99
+        },
+        {
+          "market_id": "6036096",
+          "cost": 0.07
+        },
+        {
+          "market_id": "6036097",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036098",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036099",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-chengdu-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.11,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.10999999999999943,
+      "leg_costs": [
+        {
+          "market_id": "6036074",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036075",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036076",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036078",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036082",
+          "cost": 9.99
+        },
+        {
+          "market_id": "6036083",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6036084",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036085",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036086",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036087",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036088",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-wuhan-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.09,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.08999999999999986,
+      "leg_costs": [
+        {
+          "market_id": "6036056",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036057",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036058",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036059",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036060",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036061",
+          "cost": 9.99
+        },
+        {
+          "market_id": "6036062",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036063",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036064",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036065",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036066",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-beijing-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.17,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.16999999999999993,
+      "leg_costs": [
+        {
+          "market_id": "6036045",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036046",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036047",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6036048",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036049",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6036050",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036051",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036052",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036053",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036054",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036055",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-chongqing-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.110000000000001,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.11000000000000121,
+      "leg_costs": [
+        {
+          "market_id": "6036034",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036035",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036036",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036037",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036038",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036039",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6036040",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6036041",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036042",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036043",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036044",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-taipei-on-october-24-2026",
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-warsaw-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 12.299999999999999,
+      "conditional_payout": 10,
+      "conditional_surplus": -2.299999999999999,
+      "leg_costs": [
+        {
+          "market_id": "6036012",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036013",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036014",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036015",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036016",
+          "cost": 1.22
+        },
+        {
+          "market_id": "6036017",
+          "cost": 5.02
+        },
+        {
+          "market_id": "6036018",
+          "cost": 5.0
+        },
+        {
+          "market_id": "6036019",
+          "cost": 0.8999999999999999
+        },
+        {
+          "market_id": "6036020",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6036021",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036022",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-madrid-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.7423,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.7423000000000002,
+      "leg_costs": [
+        {
+          "market_id": "6036001",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036002",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036003",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6036004",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6036005",
+          "cost": 2.4
+        },
+        {
+          "market_id": "6036006",
+          "cost": 6.8523
+        },
+        {
+          "market_id": "6036007",
+          "cost": 2.2
+        },
+        {
+          "market_id": "6036008",
+          "cost": 0.10999999999999999
+        },
+        {
+          "market_id": "6036009",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6036010",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6036011",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-milan-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.6024,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.6023999999999994,
+      "leg_costs": [
+        {
+          "market_id": "6035990",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035991",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035992",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035993",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035994",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6035995",
+          "cost": 0.1
+        },
+        {
+          "market_id": "6035996",
+          "cost": 1.5524
+        },
+        {
+          "market_id": "6035997",
+          "cost": 5.5
+        },
+        {
+          "market_id": "6035998",
+          "cost": 4.2
+        },
+        {
+          "market_id": "6035999",
+          "cost": 0.13
+        },
+        {
+          "market_id": "6036000",
+          "cost": 0.02
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shanghai-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.13,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.13000000000000078,
+      "leg_costs": [
+        {
+          "market_id": "6035968",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035969",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035970",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035971",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035972",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6035973",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6035974",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035975",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035976",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035977",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035978",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-tokyo-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.246,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.24600000000000044,
+      "leg_costs": [
+        {
+          "market_id": "6035946",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035947",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035948",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035949",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035950",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6035951",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6035952",
+          "cost": 0.10999999999999999
+        },
+        {
+          "market_id": "6035953",
+          "cost": 0.026000000000000002
+        },
+        {
+          "market_id": "6035954",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035955",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035956",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-tel-aviv-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.43495,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.4349500000000006,
+      "leg_costs": [
+        {
+          "market_id": "6035935",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035936",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6035937",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6035938",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6035939",
+          "cost": 8.8
+        },
+        {
+          "market_id": "6035940",
+          "cost": 2.4349499999999997
+        },
+        {
+          "market_id": "6035941",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6035942",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035943",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035944",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035945",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-munich-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.63,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.6300000000000008,
+      "leg_costs": [
+        {
+          "market_id": "6035924",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035925",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035926",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035927",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6035928",
+          "cost": 4.9
+        },
+        {
+          "market_id": "6035929",
+          "cost": 6.3
+        },
+        {
+          "market_id": "6035930",
+          "cost": 0.29000000000000004
+        },
+        {
+          "market_id": "6035931",
+          "cost": 0.03
+        },
+        {
+          "market_id": "6035932",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035933",
+          "cost": 0.02
+        },
+        {
+          "market_id": "6035934",
+          "cost": 0.02
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.5,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.5,
+      "leg_costs": [
+        {
+          "market_id": "6035913",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035914",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035915",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035916",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035917",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035918",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035919",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6035920",
+          "cost": 0.36
+        },
+        {
+          "market_id": "6035921",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6035922",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035923",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-ankara-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.86341,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.86341,
+      "leg_costs": [
+        {
+          "market_id": "6035891",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035892",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035893",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035894",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035895",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035896",
+          "cost": 0.72
+        },
+        {
+          "market_id": "6035897",
+          "cost": 4.6000000000000005
+        },
+        {
+          "market_id": "6035898",
+          "cost": 4.699999999999999
+        },
+        {
+          "market_id": "6035899",
+          "cost": 0.7434099999999999
+        },
+        {
+          "market_id": "6035900",
+          "cost": 0.04
+        },
+        {
+          "market_id": "6035901",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-seoul-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 10.16,
+      "conditional_payout": 10,
+      "conditional_surplus": -0.16000000000000014,
+      "leg_costs": [
+        {
+          "market_id": "6035880",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035881",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035882",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035883",
+          "cost": 9.98
+        },
+        {
+          "market_id": "6035884",
+          "cost": 0.09
+        },
+        {
+          "market_id": "6035885",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035886",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035887",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035888",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035889",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035890",
+          "cost": 0.01
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-paris-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.5897,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.5897000000000006,
+      "leg_costs": [
+        {
+          "market_id": "6035869",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035870",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035871",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035872",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035873",
+          "cost": 0.093
+        },
+        {
+          "market_id": "6035874",
+          "cost": 1.6500000000000001
+        },
+        {
+          "market_id": "6035875",
+          "cost": 6.7767
+        },
+        {
+          "market_id": "6035876",
+          "cost": 2.6
+        },
+        {
+          "market_id": "6035877",
+          "cost": 0.29000000000000004
+        },
+        {
+          "market_id": "6035878",
+          "cost": 0.08
+        },
+        {
+          "market_id": "6035879",
+          "cost": 0.06
+        }
+      ]
+    },
+    {
+      "event": "highest-temperature-in-london-on-october-24-2026",
+      "status": "margin_too_small",
+      "legs": 11,
+      "basket_cost": 11.24,
+      "conditional_payout": 10,
+      "conditional_surplus": -1.2400000000000002,
+      "leg_costs": [
+        {
+          "market_id": "6035858",
+          "cost": 0.07
+        },
+        {
+          "market_id": "6035859",
+          "cost": 0.06
+        },
+        {
+          "market_id": "6035860",
+          "cost": 0.15
+        },
+        {
+          "market_id": "6035861",
+          "cost": 0.28
+        },
+        {
+          "market_id": "6035862",
+          "cost": 2.5
+        },
+        {
+          "market_id": "6035863",
+          "cost": 5.4
+        },
+        {
+          "market_id": "6035864",
+          "cost": 2.5
+        },
+        {
+          "market_id": "6035865",
+          "cost": 0.225
+        },
+        {
+          "market_id": "6035866",
+          "cost": 0.034999999999999996
+        },
+        {
+          "market_id": "6035867",
+          "cost": 0.01
+        },
+        {
+          "market_id": "6035868",
+          "cost": 0.01
+        }
+      ]
+    }
+  ],
+  "conclusion": "Conditional multi-leg quote screen only. No executed trades or realized profits; batch orders are not atomic."
+}

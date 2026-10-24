@@ -1,0 +1,5203 @@
+{
+  "protocol": "research/polymarket/ELIMINATION_PROTOCOL.md",
+  "captured_at": "2026-10-24T10:14:59.109518+00:00",
+  "date": "2026-10-24",
+  "events_discovered": 94,
+  "markets_supported": 1012,
+  "excluded_markets": [
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-26corbelow",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-27c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-28c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-29c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-30c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-31c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-32c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-33c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-34c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-35c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "highest-temperature-in-hong-kong-on-october-24-2026-36corhigher",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-21corbelow",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-22c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-23c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-24c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-25c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-26c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-27c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-28c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-29c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-30c",
+      "reason": "unsupported resolution source"
+    },
+    {
+      "slug": "lowest-temperature-in-hong-kong-on-october-24-2026-31corhigher",
+      "reason": "unsupported resolution source"
+    }
+  ],
+  "stations": {
+    "MPMG": {
+      "zone": "America/Panama",
+      "unit": "C",
+      "reports": 3,
+      "high": 27,
+      "low": 26
+    },
+    "MMMX": {
+      "zone": "America/Mexico_City",
+      "unit": "C",
+      "reports": 4,
+      "high": 14,
+      "low": 12
+    },
+    "CYYZ": {
+      "zone": "America/Toronto",
+      "unit": "C",
+      "reports": 7,
+      "high": 7,
+      "low": 3
+    },
+    "SAEZ": {
+      "zone": "America/Argentina/Buenos_Aires",
+      "unit": "C",
+      "reports": 8,
+      "high": 14,
+      "low": 13
+    },
+    "SBGR": {
+      "zone": "America/Sao_Paulo",
+      "unit": "C",
+      "reports": 8,
+      "high": 21,
+      "low": 16
+    },
+    "KSFO": {
+      "zone": "America/Los_Angeles",
+      "unit": "F",
+      "reports": 3,
+      "high": 58,
+      "low": 55
+    },
+    "KLAX": {
+      "zone": "America/Los_Angeles",
+      "unit": "F",
+      "reports": 3,
+      "high": 63,
+      "low": 63
+    },
+    "KSEA": {
+      "zone": "America/Los_Angeles",
+      "unit": "F",
+      "reports": 3,
+      "high": 44,
+      "low": 42
+    },
+    "KHOU": {
+      "zone": "America/Chicago",
+      "unit": "F",
+      "reports": 5,
+      "high": 66,
+      "low": 62
+    },
+    "KDEN": {
+      "zone": "America/Denver",
+      "unit": "F",
+      "reports": 4,
+      "high": 58,
+      "low": 53
+    },
+    "KORD": {
+      "zone": "America/Chicago",
+      "unit": "F",
+      "reports": 5,
+      "high": 56,
+      "low": 52
+    },
+    "KMIA": {
+      "zone": "America/New_York",
+      "unit": "F",
+      "reports": 6,
+      "high": 76,
+      "low": 71
+    },
+    "KDAL": {
+      "zone": "America/Chicago",
+      "unit": "F",
+      "reports": 5,
+      "high": 67,
+      "low": 62
+    },
+    "KAUS": {
+      "zone": "America/Chicago",
+      "unit": "F",
+      "reports": 5,
+      "high": 63,
+      "low": 54
+    },
+    "KATL": {
+      "zone": "America/New_York",
+      "unit": "F",
+      "reports": 6,
+      "high": 55,
+      "low": 53
+    },
+    "KLGA": {
+      "zone": "America/New_York",
+      "unit": "F",
+      "reports": 6,
+      "high": 52,
+      "low": 49
+    },
+    "RPLL": {
+      "zone": "Asia/Manila",
+      "unit": "C",
+      "reports": 19,
+      "high": 31,
+      "low": 27
+    },
+    "OPKC": {
+      "zone": "Asia/Karachi",
+      "unit": "C",
+      "reports": 31,
+      "high": 38,
+      "low": 26
+    },
+    "ZSQD": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 19,
+      "high": 22,
+      "low": 10
+    },
+    "ZGGG": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 37,
+      "high": 31,
+      "low": 22
+    },
+    "FACT": {
+      "zone": "Africa/Johannesburg",
+      "unit": "C",
+      "reports": 13,
+      "high": 20,
+      "low": 15
+    },
+    "OEJN": {
+      "zone": "Asia/Riyadh",
+      "unit": "C",
+      "reports": 14,
+      "high": 37,
+      "low": 27
+    },
+    "WMKK": {
+      "zone": "Asia/Kuala_Lumpur",
+      "unit": "C",
+      "reports": 37,
+      "high": 31,
+      "low": 26
+    },
+    "EFHK": {
+      "zone": "Europe/Helsinki",
+      "unit": "C",
+      "reports": 26,
+      "high": 11,
+      "low": 9
+    },
+    "EHAM": {
+      "zone": "Europe/Amsterdam",
+      "unit": "C",
+      "reports": 24,
+      "high": 12,
+      "low": 9
+    },
+    "RKPK": {
+      "zone": "Asia/Seoul",
+      "unit": "C",
+      "reports": 20,
+      "high": 18,
+      "low": 16
+    },
+    "LTFM": {
+      "zone": "Europe/Istanbul",
+      "unit": "C",
+      "reports": 26,
+      "high": 17,
+      "low": 14
+    },
+    "UUWW": {
+      "zone": "Europe/Moscow",
+      "unit": "C",
+      "reports": 27,
+      "high": 12,
+      "low": 6
+    },
+    "ZGSZ": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 19,
+      "high": 31,
+      "low": 24
+    },
+    "ZUUU": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 19,
+      "high": 20,
+      "low": 17
+    },
+    "ZHHH": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 19,
+      "high": 22,
+      "low": 14
+    },
+    "ZBAA": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 37,
+      "high": 16,
+      "low": 9
+    },
+    "ZUCK": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 19,
+      "high": 22,
+      "low": 17
+    },
+    "RCSS": {
+      "zone": "Asia/Taipei",
+      "unit": "C",
+      "reports": 31,
+      "high": 27,
+      "low": 22
+    },
+    "EPWA": {
+      "zone": "Europe/Warsaw",
+      "unit": "C",
+      "reports": 25,
+      "high": 11,
+      "low": 6
+    },
+    "LEMD": {
+      "zone": "Europe/Madrid",
+      "unit": "C",
+      "reports": 25,
+      "high": 11,
+      "low": 4
+    },
+    "LIMC": {
+      "zone": "Europe/Rome",
+      "unit": "C",
+      "reports": 23,
+      "high": 14,
+      "low": 3
+    },
+    "WSSS": {
+      "zone": "Asia/Singapore",
+      "unit": "C",
+      "reports": 37,
+      "high": 33,
+      "low": 25
+    },
+    "ZSPD": {
+      "zone": "Asia/Shanghai",
+      "unit": "C",
+      "reports": 37,
+      "high": 22,
+      "low": 18
+    },
+    "RJTT": {
+      "zone": "Asia/Tokyo",
+      "unit": "C",
+      "reports": 39,
+      "high": 19,
+      "low": 17
+    },
+    "LLBG": {
+      "zone": "Asia/Jerusalem",
+      "unit": "C",
+      "reports": 26,
+      "high": 31,
+      "low": 22
+    },
+    "EDDM": {
+      "zone": "Europe/Berlin",
+      "unit": "C",
+      "reports": 24,
+      "high": 10,
+      "low": 6
+    },
+    "VILK": {
+      "zone": "Asia/Kolkata",
+      "unit": "C",
+      "reports": 32,
+      "high": 31,
+      "low": 19
+    },
+    "NZWN": {
+      "zone": "Pacific/Auckland",
+      "unit": "C",
+      "reports": 47,
+      "high": 18,
+      "low": 14
+    },
+    "LTAC": {
+      "zone": "Europe/Istanbul",
+      "unit": "C",
+      "reports": 26,
+      "high": 19,
+      "low": 6
+    },
+    "RKSI": {
+      "zone": "Asia/Seoul",
+      "unit": "C",
+      "reports": 39,
+      "high": 18,
+      "low": 15
+    },
+    "LFPB": {
+      "zone": "Europe/Paris",
+      "unit": "C",
+      "reports": 25,
+      "high": 11,
+      "low": 7
+    },
+    "EGLC": {
+      "zone": "Europe/London",
+      "unit": "C",
+      "reports": 22,
+      "high": 11,
+      "low": 7
+    }
+  },
+  "observation_errors": [],
+  "eliminated_bins": 312,
+  "quote_status_counts": {
+    "insufficient_depth": 293,
+    "margin_too_small": 19
+  },
+  "first_quote_margin_candidates": 0,
+  "confirmed_quote_candidates": 0,
+  "book_errors": [],
+  "candidates": [
+    {
+      "event": "highest-temperature-in-panama-city-on-october-24-2026",
+      "slug": "highest-temperature-in-panama-city-on-october-24-2026-23corbelow",
+      "market_id": "6041485",
+      "kind": "highest",
+      "station": "MPMG",
+      "unit": "C",
+      "rules_hash": "cb8cac703441683ea09a842207e9c60d28024b4e10951f69d1856e668a948e4f",
+      "observed": {
+        "reports": 3,
+        "high": 27,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-panama-city-on-october-24-2026",
+      "slug": "highest-temperature-in-panama-city-on-october-24-2026-24c",
+      "market_id": "6041486",
+      "kind": "highest",
+      "station": "MPMG",
+      "unit": "C",
+      "rules_hash": "6ff52b9edfacd4a4247ee805d8eeecdfdbfddd1de951f47aa730ec8fede7a2d0",
+      "observed": {
+        "reports": 3,
+        "high": 27,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-panama-city-on-october-24-2026",
+      "slug": "highest-temperature-in-panama-city-on-october-24-2026-25c",
+      "market_id": "6041487",
+      "kind": "highest",
+      "station": "MPMG",
+      "unit": "C",
+      "rules_hash": "857cfb7e799f02b05b5def51551b51b9111b4dacf219adc1ced29f6d5e0836a7",
+      "observed": {
+        "reports": 3,
+        "high": 27,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "highest-temperature-in-sao-paulo-on-october-24-2026-19corbelow",
+      "market_id": "6041441",
+      "kind": "highest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "30b8d8490a7876ab0e6da97e36542b284fd9d1a13455381a147268cc0f21b2d6",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-5c",
+      "market_id": "6041104",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "b6f0d3f03dd444eb39b86d26296cd1e77271636166cd5028740ce29254b3827d",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-6c",
+      "market_id": "6041105",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "895d812854cce1965bdbd4d3f42869e4210507bfe935619b4c3066400cdfb0cd",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-7c",
+      "market_id": "6041106",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "06741c2b439763eec89a7682df7c3d5a94bb7c997fddc0b9b01078af1e06a4fa",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-8c",
+      "market_id": "6041107",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "5656355f5ad9eabfe5744a1e2eae3afb910359075ecb8b3ec5ce772b18465f44",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-9c",
+      "market_id": "6041108",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "a19832159cef762eaad8be8d49386acad7d527605e357a409bc4dc9135ddba56",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-10c",
+      "market_id": "6041109",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "7452f9b1b976a4f15e238b72d1e6246611014aaf1c42bff07e698b2df31b89ad",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-toronto-on-october-24-2026",
+      "slug": "lowest-temperature-in-toronto-on-october-24-2026-11corhigher",
+      "market_id": "6041110",
+      "kind": "lowest",
+      "station": "CYYZ",
+      "unit": "C",
+      "rules_hash": "129a26694fa99ebf05bb57af3c0806a7e834bb431c561812fda66fa75ccce772",
+      "observed": {
+        "reports": 7,
+        "high": 7,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-buenos-aires-on-october-24-2026",
+      "slug": "lowest-temperature-in-buenos-aires-on-october-24-2026-15c",
+      "market_id": "6041096",
+      "kind": "lowest",
+      "station": "SAEZ",
+      "unit": "C",
+      "rules_hash": "cc6b9198a164439a9703c305bd7f48c4506f5f451347a3a742fc471ff045dcb4",
+      "observed": {
+        "reports": 8,
+        "high": 14,
+        "low": 13
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-buenos-aires-on-october-24-2026",
+      "slug": "lowest-temperature-in-buenos-aires-on-october-24-2026-16c",
+      "market_id": "6041097",
+      "kind": "lowest",
+      "station": "SAEZ",
+      "unit": "C",
+      "rules_hash": "3b2d1b7b917d4d27ff14956367c83bafa84d1f9bd73370e40b0610323091a69a",
+      "observed": {
+        "reports": 8,
+        "high": 14,
+        "low": 13
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-buenos-aires-on-october-24-2026",
+      "slug": "lowest-temperature-in-buenos-aires-on-october-24-2026-17c",
+      "market_id": "6041098",
+      "kind": "lowest",
+      "station": "SAEZ",
+      "unit": "C",
+      "rules_hash": "3858abf9933e6d6b4a139ea77921a5042610c5593903197176b3ec35d7dba1cd",
+      "observed": {
+        "reports": 8,
+        "high": 14,
+        "low": 13
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-buenos-aires-on-october-24-2026",
+      "slug": "lowest-temperature-in-buenos-aires-on-october-24-2026-18corhigher",
+      "market_id": "6041099",
+      "kind": "lowest",
+      "station": "SAEZ",
+      "unit": "C",
+      "rules_hash": "fbd8f68374f88e8f5de1edd8aa8c6a41983542e2c81a6efb5a482b08bfe4964f",
+      "observed": {
+        "reports": 8,
+        "high": 14,
+        "low": 13
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-18c",
+      "market_id": "6041083",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "e790ca3c063838e7e0b533cf3404962810a278adf5886a36d07d5b8cb08b21de",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-19c",
+      "market_id": "6041084",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "4419df697907724b56157cbfc43031b3b3b5995b4373aa40bc44beee7a7f9587",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-20c",
+      "market_id": "6041085",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "b4fb81104a44a3b2b646797d004952b35601ca1c2d8e083855d2b974b13ee066",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-21c",
+      "market_id": "6041086",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "c7682c1828938933b7e29ab4ee398bbd7335fed54749b4da9cdbfcc96797addc",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-22c",
+      "market_id": "6041087",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "81be66199751a9ce87f2641a7f32c6eb557ad7ec883070715e4340ef844013f7",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-sao-paulo-on-october-24-2026",
+      "slug": "lowest-temperature-in-sao-paulo-on-october-24-2026-23corhigher",
+      "market_id": "6041088",
+      "kind": "lowest",
+      "station": "SBGR",
+      "unit": "C",
+      "rules_hash": "37c7e7e5a10987d478acac9efbbe1327263f8f74e0ff2ff6115cac916a7333d0",
+      "observed": {
+        "reports": 8,
+        "high": 21,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-san-francisco-on-october-24-2026",
+      "slug": "lowest-temperature-in-san-francisco-on-october-24-2026-58-59f",
+      "market_id": "6038626",
+      "kind": "lowest",
+      "station": "KSFO",
+      "unit": "F",
+      "rules_hash": "9ec31244b53c788aadff0483730fdd608d87f05a80cb6856c7b0016741994017",
+      "observed": {
+        "reports": 3,
+        "high": 58,
+        "low": 55
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-san-francisco-on-october-24-2026",
+      "slug": "lowest-temperature-in-san-francisco-on-october-24-2026-60-61f",
+      "market_id": "6038627",
+      "kind": "lowest",
+      "station": "KSFO",
+      "unit": "F",
+      "rules_hash": "adf76c1f47484796d0c2d8094322112a4cc1a652e6e798ef2724ee69da09385a",
+      "observed": {
+        "reports": 3,
+        "high": 58,
+        "low": 55
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-san-francisco-on-october-24-2026",
+      "slug": "lowest-temperature-in-san-francisco-on-october-24-2026-62forhigher",
+      "market_id": "6038628",
+      "kind": "lowest",
+      "station": "KSFO",
+      "unit": "F",
+      "rules_hash": "bb0c94d1f03d5a304d29b2f6f9282949392061112039e0f15bed9227f60008c1",
+      "observed": {
+        "reports": 3,
+        "high": 58,
+        "low": 55
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-los-angeles-on-october-24-2026",
+      "slug": "lowest-temperature-in-los-angeles-on-october-24-2026-66-67f",
+      "market_id": "6038616",
+      "kind": "lowest",
+      "station": "KLAX",
+      "unit": "F",
+      "rules_hash": "d450d3b0308a58e7bdd22561873d10b688b3741e792765bbb1a5ad22336cf4ad",
+      "observed": {
+        "reports": 3,
+        "high": 63,
+        "low": 63
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-los-angeles-on-october-24-2026",
+      "slug": "lowest-temperature-in-los-angeles-on-october-24-2026-68forhigher",
+      "market_id": "6038617",
+      "kind": "lowest",
+      "station": "KLAX",
+      "unit": "F",
+      "rules_hash": "93472bb0fbd86d56ccc0d68ed51dbf282c645e9e7a16f4a0d47ef4d019350249",
+      "observed": {
+        "reports": 3,
+        "high": 63,
+        "low": 63
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seattle-on-october-24-2026",
+      "slug": "lowest-temperature-in-seattle-on-october-24-2026-44-45f",
+      "market_id": "6038602",
+      "kind": "lowest",
+      "station": "KSEA",
+      "unit": "F",
+      "rules_hash": "1ff3e96c8ea64388726b1c5be45b072e7db8217177de851a78fc6d34fe373900",
+      "observed": {
+        "reports": 3,
+        "high": 44,
+        "low": 42
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seattle-on-october-24-2026",
+      "slug": "lowest-temperature-in-seattle-on-october-24-2026-46-47f",
+      "market_id": "6038603",
+      "kind": "lowest",
+      "station": "KSEA",
+      "unit": "F",
+      "rules_hash": "0e037f4d3d40c9244b2e98bd3d93ccff55c35a4c8501fa11fc8ac4061e9b3a56",
+      "observed": {
+        "reports": 3,
+        "high": 44,
+        "low": 42
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seattle-on-october-24-2026",
+      "slug": "lowest-temperature-in-seattle-on-october-24-2026-48-49f",
+      "market_id": "6038604",
+      "kind": "lowest",
+      "station": "KSEA",
+      "unit": "F",
+      "rules_hash": "6b2a7ff0c81a8ab4deeaab0a3ed31788f769b7023b88b7c6433d161ab6132f4e",
+      "observed": {
+        "reports": 3,
+        "high": 44,
+        "low": 42
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seattle-on-october-24-2026",
+      "slug": "lowest-temperature-in-seattle-on-october-24-2026-50-51f",
+      "market_id": "6038605",
+      "kind": "lowest",
+      "station": "KSEA",
+      "unit": "F",
+      "rules_hash": "fff745c7fcc1eb039adb3facab2b5b5413ac44a86aeaa65f2bb4e5e163c4e823",
+      "observed": {
+        "reports": 3,
+        "high": 44,
+        "low": 42
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seattle-on-october-24-2026",
+      "slug": "lowest-temperature-in-seattle-on-october-24-2026-52forhigher",
+      "market_id": "6038606",
+      "kind": "lowest",
+      "station": "KSEA",
+      "unit": "F",
+      "rules_hash": "12cc7c43b0dbb39610a4660e59644cc5e442d39229451776949b506e981230de",
+      "observed": {
+        "reports": 3,
+        "high": 44,
+        "low": 42
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-denver-on-october-24-2026",
+      "slug": "highest-temperature-in-denver-on-october-24-2026-49forbelow",
+      "market_id": "6037835",
+      "kind": "highest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "83d00924ebae214d183576dcbafb703d0da9786c6f6ae111ae293bd5664075a8",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-denver-on-october-24-2026",
+      "slug": "highest-temperature-in-denver-on-october-24-2026-50-51f",
+      "market_id": "6037836",
+      "kind": "highest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "3c3d9e0dcbce2d8ce9e05fbae26ab6cde744b996183122ead11df871d8920b83",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-denver-on-october-24-2026",
+      "slug": "highest-temperature-in-denver-on-october-24-2026-52-53f",
+      "market_id": "6037837",
+      "kind": "highest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "e15f242f40b7f7054af6bd42cacab6ee5fd06c8bdcf86efc5c47b1010f21c416",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-denver-on-october-24-2026",
+      "slug": "highest-temperature-in-denver-on-october-24-2026-54-55f",
+      "market_id": "6037838",
+      "kind": "highest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "f508d4c452551eb85df1a2b0e0adbf9cc7d90d331ef6d00f06a47dd48ab43ca7",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-miami-on-october-24-2026",
+      "slug": "highest-temperature-in-miami-on-october-24-2026-71forbelow",
+      "market_id": "6037813",
+      "kind": "highest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "53394a3e641831a6582bc41c3d8d321245f15bf2088aa1304cac26e13ab0e89b",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-miami-on-october-24-2026",
+      "slug": "highest-temperature-in-miami-on-october-24-2026-72-73f",
+      "market_id": "6037814",
+      "kind": "highest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "539a26eb97d8b535b9002549310db0131637b4f1d8b815dbe7b69b1a16f53626",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-64-65f",
+      "market_id": "6037526",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "93e41a9defd62b66635c946a923f9f413cb98ec318c62a448c475e34a3c3bc5d",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-66-67f",
+      "market_id": "6037527",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "717d06c69add9950913f986ed5adf62405ac880007c929585006f5d71cdcc430",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-68-69f",
+      "market_id": "6037528",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "42fad325b0692d54935461c07b3e2ec79cd4e966cc944c6d6f1ea75d94822b83",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-70-71f",
+      "market_id": "6037529",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "bf7fe211b6c1ba48438ade4a04db67d41ec4cf1acec2ed6d94808ac57eaafe06",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-72-73f",
+      "market_id": "6037530",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "32f8b2945460415094a0d95b34f2e3a8c0442ec77bcf90afd94bdb5177045040",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-houston-on-october-24-2026",
+      "slug": "lowest-temperature-in-houston-on-october-24-2026-74forhigher",
+      "market_id": "6037531",
+      "kind": "lowest",
+      "station": "KHOU",
+      "unit": "F",
+      "rules_hash": "ef44da1c5132b3b9fb731cdef4c01c3b7fd719069b7425f4bece970bcf0f61be",
+      "observed": {
+        "reports": 5,
+        "high": 66,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-denver-on-october-24-2026",
+      "slug": "lowest-temperature-in-denver-on-october-24-2026-56-57f",
+      "market_id": "6037519",
+      "kind": "lowest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "33593790ae228e30f472404cd1374d617825cad2c232255751adc134eb926497",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-denver-on-october-24-2026",
+      "slug": "lowest-temperature-in-denver-on-october-24-2026-58forhigher",
+      "market_id": "6037520",
+      "kind": "lowest",
+      "station": "KDEN",
+      "unit": "F",
+      "rules_hash": "d14faa324303a9cd163e1ae9b3108db41f2de24731c71ce00c1ff4cdcae6a71e",
+      "observed": {
+        "reports": 4,
+        "high": 58,
+        "low": 53
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-56-57f",
+      "market_id": "6037503",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "368e8309b9ecd92523ceabfbebc1146e165a150de9236d9f1856922c3fbf57ce",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-58-59f",
+      "market_id": "6037504",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "3498ca8d919361bf5ee6f5dd279a5c4c92a21605f557c85ee529a94ebf952a39",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-60-61f",
+      "market_id": "6037505",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "2cc2ccb607737f750f609682325f819bb5a466ffdf0ed63e234ed39555575aaf",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-62-63f",
+      "market_id": "6037506",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "3de9bddc664bd4d1a1b9e2200b7c0716e1a2645af2f56cbaa8233a3408285491",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-64-65f",
+      "market_id": "6037507",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "3d95d22c011c51ed8f5226624f02dd17a3ed6e886177be7733ff58c3c53da313",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-66-67f",
+      "market_id": "6037508",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "0799d6decab34b52abcc9e117ed7c6c1774acf6924fbc997749f5b6cd263ea37",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-austin-on-october-24-2026",
+      "slug": "lowest-temperature-in-austin-on-october-24-2026-68forhigher",
+      "market_id": "6037509",
+      "kind": "lowest",
+      "station": "KAUS",
+      "unit": "F",
+      "rules_hash": "ea8c64d11dfee573c171c07856ed53e99bd04d08d601bc3744566245e9cc0d8f",
+      "observed": {
+        "reports": 5,
+        "high": 63,
+        "low": 54
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chicago-on-october-24-2026",
+      "slug": "lowest-temperature-in-chicago-on-october-24-2026-54-55f",
+      "market_id": "6037495",
+      "kind": "lowest",
+      "station": "KORD",
+      "unit": "F",
+      "rules_hash": "3483046038e9a4b117cac7c13cac15fef2f34ee5e1678eff2c1168fd91750949",
+      "observed": {
+        "reports": 5,
+        "high": 56,
+        "low": 52
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-chicago-on-october-24-2026",
+      "slug": "lowest-temperature-in-chicago-on-october-24-2026-56-57f",
+      "market_id": "6037496",
+      "kind": "lowest",
+      "station": "KORD",
+      "unit": "F",
+      "rules_hash": "a59ccd72641681dad166b5f6875cadce8a40bd7892115dd29871568dbc9972b5",
+      "observed": {
+        "reports": 5,
+        "high": 56,
+        "low": 52
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chicago-on-october-24-2026",
+      "slug": "lowest-temperature-in-chicago-on-october-24-2026-58-59f",
+      "market_id": "6037497",
+      "kind": "lowest",
+      "station": "KORD",
+      "unit": "F",
+      "rules_hash": "b3b2fee7e7da8123fff9326e6807167b60166d52c200503a56dcef51d2ef7839",
+      "observed": {
+        "reports": 5,
+        "high": 56,
+        "low": 52
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chicago-on-october-24-2026",
+      "slug": "lowest-temperature-in-chicago-on-october-24-2026-60forhigher",
+      "market_id": "6037498",
+      "kind": "lowest",
+      "station": "KORD",
+      "unit": "F",
+      "rules_hash": "f876665ab2f895dd56b124a0884ec514311931a5ec68266b77a79f1fc8a26087",
+      "observed": {
+        "reports": 5,
+        "high": 56,
+        "low": 52
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-miami-on-october-24-2026",
+      "slug": "lowest-temperature-in-miami-on-october-24-2026-74-75f",
+      "market_id": "6037483",
+      "kind": "lowest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "c343b28e8a8739d962b4f496a04de06b094a3e0425e6f54b6948eeaff8d66849",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-miami-on-october-24-2026",
+      "slug": "lowest-temperature-in-miami-on-october-24-2026-76-77f",
+      "market_id": "6037484",
+      "kind": "lowest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "e9d73cb55c0460a08e18bdb8cb4c87193f2e6ef3c319e1f0f2b39ccea735906e",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-miami-on-october-24-2026",
+      "slug": "lowest-temperature-in-miami-on-october-24-2026-78-79f",
+      "market_id": "6037485",
+      "kind": "lowest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "9f897cc4c48e16fdd224083c350e4d8aa6d9407b4c8af2be3bc0dc9ff9214ee8",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-miami-on-october-24-2026",
+      "slug": "lowest-temperature-in-miami-on-october-24-2026-80-81f",
+      "market_id": "6037486",
+      "kind": "lowest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "88b6556e8f0888adc53b274344e77b94c270d5263fe6f36515a9963958d02229",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-miami-on-october-24-2026",
+      "slug": "lowest-temperature-in-miami-on-october-24-2026-82forhigher",
+      "market_id": "6037487",
+      "kind": "lowest",
+      "station": "KMIA",
+      "unit": "F",
+      "rules_hash": "231c080568279ce21ab22a4765eb8825edcd3fd5049311f1dff146ba4d9bc32e",
+      "observed": {
+        "reports": 6,
+        "high": 76,
+        "low": 71
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-atlanta-on-october-24-2026",
+      "slug": "lowest-temperature-in-atlanta-on-october-24-2026-56-57f",
+      "market_id": "6037474",
+      "kind": "lowest",
+      "station": "KATL",
+      "unit": "F",
+      "rules_hash": "81e86f754f51c1f34029c1a8daff74fc23116b06f3f36da0ad816ccb596f1dd6",
+      "observed": {
+        "reports": 6,
+        "high": 55,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-atlanta-on-october-24-2026",
+      "slug": "lowest-temperature-in-atlanta-on-october-24-2026-58-59f",
+      "market_id": "6037475",
+      "kind": "lowest",
+      "station": "KATL",
+      "unit": "F",
+      "rules_hash": "1fcf59bc39a9a2a6223f959f522cd81ca9a9b9143934434830691c65d9002d09",
+      "observed": {
+        "reports": 6,
+        "high": 55,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-atlanta-on-october-24-2026",
+      "slug": "lowest-temperature-in-atlanta-on-october-24-2026-60forhigher",
+      "market_id": "6037476",
+      "kind": "lowest",
+      "station": "KATL",
+      "unit": "F",
+      "rules_hash": "78ed3e30e14900d5a45df3d2191229b882218104831f01d2e9c25d45057d13a3",
+      "observed": {
+        "reports": 6,
+        "high": 55,
+        "low": 53
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-dallas-on-october-24-2026",
+      "slug": "lowest-temperature-in-dallas-on-october-24-2026-64-65f",
+      "market_id": "6037462",
+      "kind": "lowest",
+      "station": "KDAL",
+      "unit": "F",
+      "rules_hash": "7aa225f8247f06b393b9f8b6c933c2acfd0f727bc1c66df2a98460fb33c8d8f6",
+      "observed": {
+        "reports": 5,
+        "high": 67,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-dallas-on-october-24-2026",
+      "slug": "lowest-temperature-in-dallas-on-october-24-2026-66-67f",
+      "market_id": "6037463",
+      "kind": "lowest",
+      "station": "KDAL",
+      "unit": "F",
+      "rules_hash": "48b0a0473350c8c642d150f154c357ea635269028e614ff3c7be812d728c4e0c",
+      "observed": {
+        "reports": 5,
+        "high": 67,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-dallas-on-october-24-2026",
+      "slug": "lowest-temperature-in-dallas-on-october-24-2026-68-69f",
+      "market_id": "6037464",
+      "kind": "lowest",
+      "station": "KDAL",
+      "unit": "F",
+      "rules_hash": "04eea47f6b6b0212fd3a26f23279a9a9f9c7ab7b0d7d5d44254a884b593ff9d3",
+      "observed": {
+        "reports": 5,
+        "high": 67,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-dallas-on-october-24-2026",
+      "slug": "lowest-temperature-in-dallas-on-october-24-2026-70forhigher",
+      "market_id": "6037465",
+      "kind": "lowest",
+      "station": "KDAL",
+      "unit": "F",
+      "rules_hash": "ace8a21220e5a7bc0b191d11b0ee4a7b7c2617811612712d3fd5d38630f0055b",
+      "observed": {
+        "reports": 5,
+        "high": 67,
+        "low": 62
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-nyc-on-october-24-2026",
+      "slug": "lowest-temperature-in-nyc-on-october-24-2026-52-53f",
+      "market_id": "6037453",
+      "kind": "lowest",
+      "station": "KLGA",
+      "unit": "F",
+      "rules_hash": "76ae6a91ca36d0d39216b2cb3f132acf73b004a432baba77d86576c4afbe42b4",
+      "observed": {
+        "reports": 6,
+        "high": 52,
+        "low": 49
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-nyc-on-october-24-2026",
+      "slug": "lowest-temperature-in-nyc-on-october-24-2026-54forhigher",
+      "market_id": "6037454",
+      "kind": "lowest",
+      "station": "KLGA",
+      "unit": "F",
+      "rules_hash": "6d65b0751949a09fd9c8b14df439b87d6cbdb98589e0f3f38ded63e5e88087e7",
+      "observed": {
+        "reports": 6,
+        "high": 52,
+        "low": 49
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-manila-on-october-24-2026",
+      "slug": "highest-temperature-in-manila-on-october-24-2026-27corbelow",
+      "market_id": "6036221",
+      "kind": "highest",
+      "station": "RPLL",
+      "unit": "C",
+      "rules_hash": "f67145200b941b3c3589e8f4df6c73191decc9643a60cef07b3622073979efbf",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-manila-on-october-24-2026",
+      "slug": "highest-temperature-in-manila-on-october-24-2026-28c",
+      "market_id": "6036222",
+      "kind": "highest",
+      "station": "RPLL",
+      "unit": "C",
+      "rules_hash": "ffe1c097b0f5655a8506be03f73a56934065d7782959f566733f1e466d453ee7",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-manila-on-october-24-2026",
+      "slug": "highest-temperature-in-manila-on-october-24-2026-29c",
+      "market_id": "6036223",
+      "kind": "highest",
+      "station": "RPLL",
+      "unit": "C",
+      "rules_hash": "1a760db41add05aa152b46184ddd5608b7ab3cbc213903c1d98a78fbfbdda5f2",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-31corbelow",
+      "market_id": "6036210",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "5bfb8f9bffa438bc787e25ffb975e9d40f76195ef588c5db808cb8a75379e950",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-32c",
+      "market_id": "6036211",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "97504c051915e5598f82babd0340d8988741c6e7c5bb65c67db868a2159f4b1a",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-33c",
+      "market_id": "6036212",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "d4c4d32a3e02a77f0f597be54dcf235ca128b734b666c5620368c415cd16ffb0",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-34c",
+      "market_id": "6036213",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "c1771404801190afa5337b68a75799c9aeb2570dac922c1320aab4883e37dbf1",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-35c",
+      "market_id": "6036214",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "16be3401f4b8dac3afe76da6824be8e3fd5a2bab51f3c63b643295daa93dcf67",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-karachi-on-october-24-2026",
+      "slug": "highest-temperature-in-karachi-on-october-24-2026-36c",
+      "market_id": "6036215",
+      "kind": "highest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "bd83b4f388df08e9e2246b73551a98b6ac75f7b20b2e58d8dbc411eb05474a51",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "highest-temperature-in-qingdao-on-october-24-2026-17corbelow",
+      "market_id": "6036199",
+      "kind": "highest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "e1dead3e0dfa10e71704b3db665b4919e175940cab47ef23fa949486cbb2eebb",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "highest-temperature-in-qingdao-on-october-24-2026-18c",
+      "market_id": "6036200",
+      "kind": "highest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "80670ed0972f3e33be129a41ec08f46cf18f09ed8cd79736853d9edb7cb8431f",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "highest-temperature-in-qingdao-on-october-24-2026-19c",
+      "market_id": "6036201",
+      "kind": "highest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "ca2eec4cf40edff9a85d21e853eeaeea80b134e0886f7b2fd3e9d0e945ba154a",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "highest-temperature-in-qingdao-on-october-24-2026-20c",
+      "market_id": "6036202",
+      "kind": "highest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "7dda2dc59fd0b4df1901e42854f65180931ff6fabbbe5d06e8cdf18b370b123c",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "highest-temperature-in-guangzhou-on-october-24-2026-25corbelow",
+      "market_id": "6036188",
+      "kind": "highest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "a6341c214f38f37ac8d218b79d410ef679c5540f596946fab544e92aad67635a",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "highest-temperature-in-guangzhou-on-october-24-2026-26c",
+      "market_id": "6036189",
+      "kind": "highest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "6af4fabbcb6ce75c843153f25fba785c2028ee22ee5c6b1dbeb7a0edd2e2569f",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "highest-temperature-in-guangzhou-on-october-24-2026-27c",
+      "market_id": "6036190",
+      "kind": "highest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "e0ba81dfe6fe436a5a3ad203c9ff5fd476b4fbccdaf815803181cade59b4bd60",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "highest-temperature-in-guangzhou-on-october-24-2026-28c",
+      "market_id": "6036191",
+      "kind": "highest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "2620ee2442d8af05c58e9b803f55695581174a1f48476cce78a2775479be8208",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "highest-temperature-in-guangzhou-on-october-24-2026-29c",
+      "market_id": "6036192",
+      "kind": "highest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "b51e15e1f5dc35f9ff82880fe72a1ef7f21eed47dabe42cbd60db40efa293b9d",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-cape-town-on-october-24-2026",
+      "slug": "highest-temperature-in-cape-town-on-october-24-2026-18corbelow",
+      "market_id": "6036177",
+      "kind": "highest",
+      "station": "FACT",
+      "unit": "C",
+      "rules_hash": "3a13502f11f4129dd6a9f2ccbc73aa0403d3a98195a85bfd140ad64d8b4831c9",
+      "observed": {
+        "reports": 13,
+        "high": 20,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-28corbelow",
+      "market_id": "6036166",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "9a226549e9bc77b57181a05b33606b4ac3782fd5694e57263fef7d6d9675a85c",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-29c",
+      "market_id": "6036167",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "73fdbe56f02ad3007e2320185bc4e31e6ae037dcde7838f35c6b399aab5662ea",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-30c",
+      "market_id": "6036168",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "55349e33ee920ac71176eb0e9dce9de1d78c2d626c3474b3ac86e9153f86e546",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-31c",
+      "market_id": "6036169",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "1c17c769a05c2e28a31970b1c1a5edb14e128b630c9e66b6ad360a0867031be3",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-32c",
+      "market_id": "6036170",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "c1072bbe95d8a5e13a44688dd1787b5fceb3d2b5a51b41b2608bd615f0245c67",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-33c",
+      "market_id": "6036171",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "d722963d825d51aa72e2acd0f6f84a60ccbe874ed43df824629d7d1487e8c7fd",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-34c",
+      "market_id": "6036172",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "b8038a4294ef2035492e8996b5c3bb0649431885d699e210d1046f2d78a5247b",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "highest-temperature-in-jeddah-on-october-24-2026-35c",
+      "market_id": "6036173",
+      "kind": "highest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "8b484049c179853b4c71cb5fdae34b19b1832d78b3274adc1bdab4afaafb65a1",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-24corbelow",
+      "market_id": "6036155",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "d3478f2f8d585c63fc83baece424ba4ae8f9786e83daa7c1da18892342adbf62",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-25c",
+      "market_id": "6036156",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "a8efd52559c7bdaeade56a30c02d54d3c80edbf364a90b2e836db03ddeb3cbf5",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-26c",
+      "market_id": "6036157",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "650b0b70cc94813982dbfecfe312b03a0bb101ef619a0d1d931848a65e8d01a1",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-27c",
+      "market_id": "6036158",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "604fc4a8863d387dc85945691eaf8cb9dacf1a550308c1ae17d02559e2895d76",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-28c",
+      "market_id": "6036159",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "ed9c11eb6dabc3fcf2c3329deae6e9fdcc9466b9febdc99f447e90dc5aede8d4",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-kuala-lumpur-on-october-24-2026",
+      "slug": "highest-temperature-in-kuala-lumpur-on-october-24-2026-29c",
+      "market_id": "6036160",
+      "kind": "highest",
+      "station": "WMKK",
+      "unit": "C",
+      "rules_hash": "d57fa6a6f1f5fa773478bf08d1950d2cacdfc764e580779beb3e41a3d6dd99b3",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "highest-temperature-in-helsinki-on-october-24-2026-6corbelow",
+      "market_id": "6036144",
+      "kind": "highest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "20ae5cf44e2d9bbe8aebc74cbfc173cb14815c4a19d308100a763efbe3c9fdb3",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "highest-temperature-in-helsinki-on-october-24-2026-7c",
+      "market_id": "6036145",
+      "kind": "highest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "1c823190d07908b668ead87e4eb2ed7602490b254b717e10d24d8a91ddb764bd",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "highest-temperature-in-helsinki-on-october-24-2026-8c",
+      "market_id": "6036146",
+      "kind": "highest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "08fc2ca90b7fed9a937cc567d944f54607101519ffe5de8614cdbdcb1e16706f",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "highest-temperature-in-helsinki-on-october-24-2026-9c",
+      "market_id": "6036147",
+      "kind": "highest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "60177b6e5c374c012fdb6dceaf4149448f3eff47e8e9a203cbfbce03c917e794",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "highest-temperature-in-amsterdam-on-october-24-2026-7corbelow",
+      "market_id": "6036133",
+      "kind": "highest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "d4f359867fef7b3aefa28218524d3d407fba98f2d62fab66e3956bf0d3d3b9fa",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "highest-temperature-in-amsterdam-on-october-24-2026-8c",
+      "market_id": "6036134",
+      "kind": "highest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "26c96e33fd5fa613a6bf346c78db307f6ebd316f2aba6d54d00a2c4a30b6ef42",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "highest-temperature-in-amsterdam-on-october-24-2026-9c",
+      "market_id": "6036135",
+      "kind": "highest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "223d40a8434282fb0cad0737b11adb4cdf8a04c94d4f2ab76a66c9496b024801",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "highest-temperature-in-amsterdam-on-october-24-2026-10c",
+      "market_id": "6036136",
+      "kind": "highest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "fd2912e32fe731883704ff16fd51e4fd1a44b16db4541df331511efd5568a970",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-busan-on-october-24-2026",
+      "slug": "highest-temperature-in-busan-on-october-24-2026-13corbelow",
+      "market_id": "6036122",
+      "kind": "highest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "fbf587c235b84ef7466fa7e0462fbd31bec52f6bda739e5e0b368e760822d9c7",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-busan-on-october-24-2026",
+      "slug": "highest-temperature-in-busan-on-october-24-2026-14c",
+      "market_id": "6036123",
+      "kind": "highest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "13c62a57b9171edca433d4038c4ae009b1a151ab798979035ab88c5ee5450b87",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-busan-on-october-24-2026",
+      "slug": "highest-temperature-in-busan-on-october-24-2026-15c",
+      "market_id": "6036124",
+      "kind": "highest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "ac0d976c19a6aae62ba457bfcba6cf52447d3c8fa18566cb32bf3758f822391c",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-busan-on-october-24-2026",
+      "slug": "highest-temperature-in-busan-on-october-24-2026-16c",
+      "market_id": "6036125",
+      "kind": "highest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "88226ecc34aa2e0e78c05a510aaa9f9ce8061d453b2cd0e9b5bffa3efc29a3b1",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "highest-temperature-in-istanbul-on-october-24-2026-12corbelow",
+      "market_id": "6036111",
+      "kind": "highest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "9b5e4be6955c606689aced3559d1e0deadb7bc7fbcd2baa60cb12d2f55dd78e0",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "highest-temperature-in-istanbul-on-october-24-2026-13c",
+      "market_id": "6036112",
+      "kind": "highest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "355f517f521934799c1c06d0617b00afc9b617b0d15deb2e27e5fb6b33985df6",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "highest-temperature-in-istanbul-on-october-24-2026-14c",
+      "market_id": "6036113",
+      "kind": "highest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "0a9ae0b1477599e3928f14d9ae9d9649602c538f4c90db07ae5f74c7e1d83d1a",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "highest-temperature-in-istanbul-on-october-24-2026-15c",
+      "market_id": "6036114",
+      "kind": "highest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "e9756a44dc1943d8849e771a51afd901dfdc7987fc6f21699c436b3a058139c6",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-4corbelow",
+      "market_id": "6036100",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "a1f1e26f3a074020c68b36fb540a2478b8bd26a1b052650cafdb9e94b2cd1f4e",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-5c",
+      "market_id": "6036101",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "7b837032cc9420211f5e5bbd37db60bc90346b0e63f1b4408c3a93c29cba2660",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-6c",
+      "market_id": "6036102",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "66e106e0f989e2844788429e399138f2597d0282b6b159f0e4c6e623170bbf62",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-7c",
+      "market_id": "6036103",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "d9c6b4bdf376df3b35499949580bc1d382932452279d4e2fd06c4f2ca948ff53",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-8c",
+      "market_id": "6036104",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "755b57d5fea0aabc800eacaf5c9e2170d821117deffbd2010de6c4311b90e8ac",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-9c",
+      "market_id": "6036105",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "89bceb754169ff0a7221d13669181bbde67ac944852a8ca33892f9017ed3f962",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-moscow-on-october-24-2026",
+      "slug": "highest-temperature-in-moscow-on-october-24-2026-10c",
+      "market_id": "6036106",
+      "kind": "highest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "66afa0f82db13db2fd6db5fb6a358c79e14d2feb97ccfc292eb81af131bfd4da",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "highest-temperature-in-shenzhen-on-october-24-2026-25corbelow",
+      "market_id": "6036089",
+      "kind": "highest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "1081886fe9462c7b83404e0beffdefceb14368ee0b311f63ef632c835f6e96be",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "highest-temperature-in-shenzhen-on-october-24-2026-26c",
+      "market_id": "6036090",
+      "kind": "highest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "4d16b00d3282f4a5ed7e19754ef089c44c1ee575dfedf4612bca92dbc4cec228",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "highest-temperature-in-shenzhen-on-october-24-2026-27c",
+      "market_id": "6036091",
+      "kind": "highest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "a86e67585f297538daddd8e8f229bac6d35b4cd20144f35b068439a07bd3b388",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "highest-temperature-in-shenzhen-on-october-24-2026-28c",
+      "market_id": "6036092",
+      "kind": "highest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "6069f92c67f23431d946cdb272fc1ccde804274e4de9afb362a94747f17edba0",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "highest-temperature-in-shenzhen-on-october-24-2026-29c",
+      "market_id": "6036093",
+      "kind": "highest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "77a18031abc99a828f72bc2b6409689ab9ae093d4fca153853bd11e34e47c6ac",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "highest-temperature-in-chengdu-on-october-24-2026-16corbelow",
+      "market_id": "6036074",
+      "kind": "highest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "0d41ed08b4a833e7bede6bf87542fa2051ae1c498da9609db36272c0de7bc678",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "highest-temperature-in-chengdu-on-october-24-2026-17c",
+      "market_id": "6036075",
+      "kind": "highest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "3b92f2913c3c536002140e7ace329a60e1c5c0b448805fff05e155d55319e215",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "highest-temperature-in-chengdu-on-october-24-2026-18c",
+      "market_id": "6036076",
+      "kind": "highest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "711c6e1e385eebede0555c54e7524d17b9cf1352e68beec4f871809e0d173f0b",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "highest-temperature-in-wuhan-on-october-24-2026-17corbelow",
+      "market_id": "6036056",
+      "kind": "highest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "43acd7de8c0391f10357528189844c700089f3f9aa895056e9a1390ed53bf9e9",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "highest-temperature-in-wuhan-on-october-24-2026-18c",
+      "market_id": "6036057",
+      "kind": "highest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "ae094008a363612621c05d56c8fa790d7b92f55d1454d73c0afbdc2b11b08d93",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "highest-temperature-in-wuhan-on-october-24-2026-19c",
+      "market_id": "6036058",
+      "kind": "highest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "298c54a967dd56ed3813c6f2419581b76ad9d9ac2621031e630068bc47dc26b6",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "highest-temperature-in-wuhan-on-october-24-2026-20c",
+      "market_id": "6036059",
+      "kind": "highest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "b8f96a31ba608d889d41faca8a29a4bc3138a8c6b0550e27c4fd84dd467abe5f",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-beijing-on-october-24-2026",
+      "slug": "highest-temperature-in-beijing-on-october-24-2026-14corbelow",
+      "market_id": "6036045",
+      "kind": "highest",
+      "station": "ZBAA",
+      "unit": "C",
+      "rules_hash": "2e296e6540cd31d68cbcb93eadb941241db7b6268061f71392040709f5366a0d",
+      "observed": {
+        "reports": 37,
+        "high": 16,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "highest-temperature-in-chongqing-on-october-24-2026-17corbelow",
+      "market_id": "6036034",
+      "kind": "highest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "be26dcc6e93d7ea0ee2fc9b2e5c3d9e2dc44c01894cafd3146cdbc3c3966499d",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "highest-temperature-in-chongqing-on-october-24-2026-18c",
+      "market_id": "6036035",
+      "kind": "highest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "98025df1784f7fb40072aefadf7a9756302f508e64a069b1cebc7aa168737212",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "highest-temperature-in-chongqing-on-october-24-2026-19c",
+      "market_id": "6036036",
+      "kind": "highest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "42be927ee1583d4a8177a8d63d27937892eabcb855b8604d62b43e274aa193da",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "highest-temperature-in-chongqing-on-october-24-2026-20c",
+      "market_id": "6036037",
+      "kind": "highest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "b919442f8e86f1d0e5288aa20770e09c8cefbae464c80c1de1f3d3aef1dc89a9",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-taipei-on-october-24-2026",
+      "slug": "highest-temperature-in-taipei-on-october-24-2026-22corbelow",
+      "market_id": "6036023",
+      "kind": "highest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "84d036f906f2a599465db68ecd7c05ae96076c0689793640634e2d54e345fd0e",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-taipei-on-october-24-2026",
+      "slug": "highest-temperature-in-taipei-on-october-24-2026-23c",
+      "market_id": "6036024",
+      "kind": "highest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "f69132c605701dd85214f582d7a0ce1635ac6233603b88f2400208040c6a81f9",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-taipei-on-october-24-2026",
+      "slug": "highest-temperature-in-taipei-on-october-24-2026-24c",
+      "market_id": "6036025",
+      "kind": "highest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "85590b18065062ce36fdd38d336f38422fce10585aecf8e9e428328c113204e5",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-taipei-on-october-24-2026",
+      "slug": "highest-temperature-in-taipei-on-october-24-2026-25c",
+      "market_id": "6036026",
+      "kind": "highest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "ea780a83537e6dc6887a6dfd61d940469afa0a1dcdee830fdcd52548fd824a8a",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "highest-temperature-in-warsaw-on-october-24-2026-7corbelow",
+      "market_id": "6036012",
+      "kind": "highest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "9e34d312758ade143ba73c753417ecbf74768102f486393916eb4d9993843b09",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "highest-temperature-in-warsaw-on-october-24-2026-8c",
+      "market_id": "6036013",
+      "kind": "highest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "5f601fc2d9f42b0fb7500fef04356c1a4da8cb6378654bbd6848abf13480bb5b",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "highest-temperature-in-warsaw-on-october-24-2026-9c",
+      "market_id": "6036014",
+      "kind": "highest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "cb1ad17c8bbaab74842f49f2f90d641dc3219d5a2096c443661889ea7b35a0ea",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-milan-on-october-24-2026",
+      "slug": "highest-temperature-in-milan-on-october-24-2026-10corbelow",
+      "market_id": "6035990",
+      "kind": "highest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "396eda533c073d7d4489c8c66582be38fa9931de2bc5dd1344fa380560bb1215",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-milan-on-october-24-2026",
+      "slug": "highest-temperature-in-milan-on-october-24-2026-11c",
+      "market_id": "6035991",
+      "kind": "highest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "ec28ee63be439916254d4efb982a222b9dd5383c9be6abcd3c0e37fb72e78849",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-milan-on-october-24-2026",
+      "slug": "highest-temperature-in-milan-on-october-24-2026-12c",
+      "market_id": "6035992",
+      "kind": "highest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "aa18b4517f46bccbee739d2d7aa6d2fdc1f7a37f82e7e7829993c72559450382",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-26corbelow",
+      "market_id": "6035979",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "d3db3da09fbcc95bf724013227fa93cc17a22c4904edf08365f6fc077406593f",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-27c",
+      "market_id": "6035980",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "71c50f34d944169cd76020ba032cc9a4622e3cd1bfa81b8de52ec5deb2591ffc",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-28c",
+      "market_id": "6035981",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "e3d5a5158e026cebe78d51a6749307562d08afd8175bc82986fa2010160317c2",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-29c",
+      "market_id": "6035982",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "5bad2846c931fc1a72675942fcef7c4befde88a9780f4c834ab71f67f8cdabab",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-30c",
+      "market_id": "6035983",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "3f4254fcd7ae611f693af5b86650210577d7ee976d356f70337a7afa63a4b981",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-singapore-on-october-24-2026",
+      "slug": "highest-temperature-in-singapore-on-october-24-2026-31c",
+      "market_id": "6035984",
+      "kind": "highest",
+      "station": "WSSS",
+      "unit": "C",
+      "rules_hash": "49008c2596823151d8a17dd82967a56d2546ef1d71fbb57b88fb6d76d9273e65",
+      "observed": {
+        "reports": 37,
+        "high": 33,
+        "low": 25
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "highest-temperature-in-shanghai-on-october-24-2026-18corbelow",
+      "market_id": "6035968",
+      "kind": "highest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "e9b143e3071b3d9909972c7db9ec0a8c4b7a3b3c5161929ce79623bd72db5c8e",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "highest-temperature-in-shanghai-on-october-24-2026-19c",
+      "market_id": "6035969",
+      "kind": "highest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "0ddc90b1cc4f94bf99c5ec67851778c8a1278de1b8c7e77941bf5e6e465f6e58",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "highest-temperature-in-shanghai-on-october-24-2026-20c",
+      "market_id": "6035970",
+      "kind": "highest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "29999a6cc92730771b75dfb4e9193a4c9983b352cc333c197e2d574162c25a14",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "highest-temperature-in-tokyo-on-october-24-2026-14corbelow",
+      "market_id": "6035946",
+      "kind": "highest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "a15516c1b4effc61d7d5f1ab0a442d7798fef6df121d772f00e5d57aafe30792",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "highest-temperature-in-tokyo-on-october-24-2026-15c",
+      "market_id": "6035947",
+      "kind": "highest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "e174b86cb4ecab93cdd422aaac0f33613b907f11da4f37ee09b4c4dcdb6d29e0",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "highest-temperature-in-tokyo-on-october-24-2026-16c",
+      "market_id": "6035948",
+      "kind": "highest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "a1295380e7426f7da86e95142001e25601089af5f2223cdaa52b6e6fb9ba6811",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "highest-temperature-in-tokyo-on-october-24-2026-17c",
+      "market_id": "6035949",
+      "kind": "highest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "2187ae3bffd001afd877107bca7003a367ea3dd9936aaba630fdc450481cecff",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "highest-temperature-in-tel-aviv-on-october-24-2026-27corbelow",
+      "market_id": "6035935",
+      "kind": "highest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "58b12d489b6dc9f19b5275f9064e656f4d18ef3ef33ec4f91bcf6aeb0e9f4a3c",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "highest-temperature-in-tel-aviv-on-october-24-2026-28c",
+      "market_id": "6035936",
+      "kind": "highest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "e9b9a9c8cc93ebb091e740cd0896573ef1c3fafce761c0a57f7fea0d8c7da3ce",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "highest-temperature-in-tel-aviv-on-october-24-2026-29c",
+      "market_id": "6035937",
+      "kind": "highest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "072e5c231665f7749a1f4a1f32337c3bfeb453c0220f8c2668a3c00808e3b585",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-munich-on-october-24-2026",
+      "slug": "highest-temperature-in-munich-on-october-24-2026-6corbelow",
+      "market_id": "6035924",
+      "kind": "highest",
+      "station": "EDDM",
+      "unit": "C",
+      "rules_hash": "950213af4ab4c8e78b1a2970f16d1f1fc9bcf1e96feaaf587c5a9b50b276c941",
+      "observed": {
+        "reports": 24,
+        "high": 10,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-munich-on-october-24-2026",
+      "slug": "highest-temperature-in-munich-on-october-24-2026-7c",
+      "market_id": "6035925",
+      "kind": "highest",
+      "station": "EDDM",
+      "unit": "C",
+      "rules_hash": "d028228662525ec4f7c18f1548503e380dc39a2869fb09e3ad2fd1216495aafe",
+      "observed": {
+        "reports": 24,
+        "high": 10,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-munich-on-october-24-2026",
+      "slug": "highest-temperature-in-munich-on-october-24-2026-8c",
+      "market_id": "6035926",
+      "kind": "highest",
+      "station": "EDDM",
+      "unit": "C",
+      "rules_hash": "2f229864f602f95c15b2384a08d455af23da7c7976ca8025b9b8f6cd93ce677d",
+      "observed": {
+        "reports": 24,
+        "high": 10,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "highest-temperature-in-lucknow-on-october-24-2026-25corbelow",
+      "market_id": "6035913",
+      "kind": "highest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "201906f38261468fe79810719a8c5ba4a08b931d0ac2cba25b24b182e6b91a4d",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "highest-temperature-in-lucknow-on-october-24-2026-26c",
+      "market_id": "6035914",
+      "kind": "highest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "7e22c661e837a257ab2d5460a1b9799eeea95050f8ce49b4bb09bb187d36f928",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "highest-temperature-in-lucknow-on-october-24-2026-27c",
+      "market_id": "6035915",
+      "kind": "highest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "c26914752d361254638c464596bb1eac0edb58769203a3c1be908066914b6b34",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "highest-temperature-in-lucknow-on-october-24-2026-28c",
+      "market_id": "6035916",
+      "kind": "highest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "fa8542a11d0c0b67e0263d4dd0b044d2119da4e3909894ef4ac48f583db9f7bc",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "highest-temperature-in-lucknow-on-october-24-2026-29c",
+      "market_id": "6035917",
+      "kind": "highest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "b2e923b8b8c27d2b6c1fd8fffa08d238957e1d89a83ca3eb1b36bc3c9561aff0",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "slug": "highest-temperature-in-wellington-on-october-24-2026-12corbelow",
+      "market_id": "6035902",
+      "kind": "highest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "87993f2690d07b9d38da71177690290814a1ac27d86f6b908dacf1fb5dc6ac22",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "slug": "highest-temperature-in-wellington-on-october-24-2026-13c",
+      "market_id": "6035903",
+      "kind": "highest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "364307605c1f780f2cb08f3bc6856e6e8d76211468409744f1335c952a9f719d",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "slug": "highest-temperature-in-wellington-on-october-24-2026-14c",
+      "market_id": "6035904",
+      "kind": "highest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "c346825195c65e73a9fd26784554408b463cc4119dc2145d3e36e5df3fa23585",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "slug": "highest-temperature-in-wellington-on-october-24-2026-15c",
+      "market_id": "6035905",
+      "kind": "highest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "fe2cb99d74c50fa7ccfd3c64a89f444ecce3d8dcb07407d79930eb8b329f01ea",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-wellington-on-october-24-2026",
+      "slug": "highest-temperature-in-wellington-on-october-24-2026-16c",
+      "market_id": "6035906",
+      "kind": "highest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "fc024e1bd6b4562de54b5ff6e8fb9a168eaae1ed5c7d6adf1e511e34a559af1d",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-ankara-on-october-24-2026",
+      "slug": "highest-temperature-in-ankara-on-october-24-2026-14corbelow",
+      "market_id": "6035891",
+      "kind": "highest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "a04fe964c2c6a83258f3a0416d86546d30814349d4a7d4c8738f55eb63166766",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-ankara-on-october-24-2026",
+      "slug": "highest-temperature-in-ankara-on-october-24-2026-15c",
+      "market_id": "6035892",
+      "kind": "highest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "c586953d5b6ba6381c6ec0be163cf8dde524fc0349bf03857e33854fa2c87540",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-ankara-on-october-24-2026",
+      "slug": "highest-temperature-in-ankara-on-october-24-2026-16c",
+      "market_id": "6035893",
+      "kind": "highest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "efbdcf0cc111a6d987fbbcf86bfffe00b6a1dda9899b8e275319d6be6f428dce",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-ankara-on-october-24-2026",
+      "slug": "highest-temperature-in-ankara-on-october-24-2026-17c",
+      "market_id": "6035894",
+      "kind": "highest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "206342d93fc3e9d97684ec8d9992a4455c575aa3140bc4745c35890b60bbba4b",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-seoul-on-october-24-2026",
+      "slug": "highest-temperature-in-seoul-on-october-24-2026-15corbelow",
+      "market_id": "6035880",
+      "kind": "highest",
+      "station": "RKSI",
+      "unit": "C",
+      "rules_hash": "b45cec12ec10d85ef58546fbc5b225395933cfa18e2aeec13a1387b4e4d48f0f",
+      "observed": {
+        "reports": 39,
+        "high": 18,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-seoul-on-october-24-2026",
+      "slug": "highest-temperature-in-seoul-on-october-24-2026-16c",
+      "market_id": "6035881",
+      "kind": "highest",
+      "station": "RKSI",
+      "unit": "C",
+      "rules_hash": "38e201889349c122ad17562c53b329457474fbf93de659bedce67f0980a4a2e4",
+      "observed": {
+        "reports": 39,
+        "high": 18,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-paris-on-october-24-2026",
+      "slug": "highest-temperature-in-paris-on-october-24-2026-7corbelow",
+      "market_id": "6035869",
+      "kind": "highest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "1d03f16f59095e2536140a18f3ff7e09a7cfca2d3d9991e4e1a6a3d96e69a1f7",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-paris-on-october-24-2026",
+      "slug": "highest-temperature-in-paris-on-october-24-2026-8c",
+      "market_id": "6035870",
+      "kind": "highest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "749ca757c4394a720f428a1805f6c005f3832599f75aa153419c3f645f337fc0",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "highest-temperature-in-paris-on-october-24-2026",
+      "slug": "highest-temperature-in-paris-on-october-24-2026-9c",
+      "market_id": "6035871",
+      "kind": "highest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "8d16dfec912cc2861d09f835f67d6a88ad54a31e591e902c2a4fd1ebcd1c0c61",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-karachi-on-october-24-2026",
+      "slug": "lowest-temperature-in-karachi-on-october-24-2026-28c",
+      "market_id": "6035612",
+      "kind": "lowest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "d2f58db15694b1bb07989a59ca58c84e9e1c5628bb3824436831e2f66b90a415",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-karachi-on-october-24-2026",
+      "slug": "lowest-temperature-in-karachi-on-october-24-2026-29c",
+      "market_id": "6035613",
+      "kind": "lowest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "b7d4fc9fac867985f9880762e96290666fd4dea50517286f8b2e8dc1442333b9",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-karachi-on-october-24-2026",
+      "slug": "lowest-temperature-in-karachi-on-october-24-2026-30c",
+      "market_id": "6035614",
+      "kind": "lowest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "bd0a454354cba20586b39868b3096b4d5922883ab22ed1ea81f9756f824179f3",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-karachi-on-october-24-2026",
+      "slug": "lowest-temperature-in-karachi-on-october-24-2026-31corhigher",
+      "market_id": "6035615",
+      "kind": "lowest",
+      "station": "OPKC",
+      "unit": "C",
+      "rules_hash": "d68368a99f95df871a3333cc51d498ba9c768a3a5ac0432594685107b97930a3",
+      "observed": {
+        "reports": 31,
+        "high": 38,
+        "low": 26
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-12c",
+      "market_id": "6035597",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "fe12f3bb1e6d027c3ac0909d5e7e3703336c00b25605ac19a5695132717e8437",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-13c",
+      "market_id": "6035598",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "ebaac6a88b4abce64e600eeeeb8b66e2339ab68c4eaf573ccef2c477dbe799f2",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-14c",
+      "market_id": "6035599",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "e7dff63bca2b17ef8284a0c3e1216c11bf69fd9cb418ac9902e72c4749f177e1",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-15c",
+      "market_id": "6035600",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "1e387830b8149d3f770f7121a62b8e84d4b1e1ed42c3b44aa6995b52c80f809f",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-16c",
+      "market_id": "6035601",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "7e191181b4aa839e7e6ba4c46c8797fcfc658da4e1ae2dac1b7d33e79f92d864",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-17c",
+      "market_id": "6035602",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "98848f927725c56f7c9b409bf5203dcd956aedb4a8c2250c51e8f6e168914d3c",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-18c",
+      "market_id": "6035603",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "4467169e1a24b00c153ba6c46a4460d44caea573cde30c7531eb316b55b86452",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-qingdao-on-october-24-2026",
+      "slug": "lowest-temperature-in-qingdao-on-october-24-2026-19corhigher",
+      "market_id": "6035604",
+      "kind": "lowest",
+      "station": "ZSQD",
+      "unit": "C",
+      "rules_hash": "50d8bf9791cf9056a693e6ab84839001fd3ed8c71936d1b90395034ee591e513",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 10
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "lowest-temperature-in-guangzhou-on-october-24-2026-24c",
+      "market_id": "6035591",
+      "kind": "lowest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "6a42777dd561ef139872917c04293689dc9098c3dec5db740932ff8e2fa30ab9",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "lowest-temperature-in-guangzhou-on-october-24-2026-25c",
+      "market_id": "6035592",
+      "kind": "lowest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "d6cc6686b83bffe3d13b33ecb717b7e12cfc014efb679ac508ce0b326e422991",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-guangzhou-on-october-24-2026",
+      "slug": "lowest-temperature-in-guangzhou-on-october-24-2026-26corhigher",
+      "market_id": "6035593",
+      "kind": "lowest",
+      "station": "ZGGG",
+      "unit": "C",
+      "rules_hash": "f385bbc22da67f36eed910f27fd242a1157ac14d4847bab145ca49db861e0385",
+      "observed": {
+        "reports": 37,
+        "high": 31,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-cape-town-on-october-24-2026",
+      "slug": "lowest-temperature-in-cape-town-on-october-24-2026-17c",
+      "market_id": "6035580",
+      "kind": "lowest",
+      "station": "FACT",
+      "unit": "C",
+      "rules_hash": "05a6bd599707b5187b2c3ab60e7187620141fe1aab2ab5b2d6198eb7a75391df",
+      "observed": {
+        "reports": 13,
+        "high": 20,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-cape-town-on-october-24-2026",
+      "slug": "lowest-temperature-in-cape-town-on-october-24-2026-18c",
+      "market_id": "6035581",
+      "kind": "lowest",
+      "station": "FACT",
+      "unit": "C",
+      "rules_hash": "5905588bf92bc0d676651069197b6a6f8aaa985c783a183ab7731c771634537a",
+      "observed": {
+        "reports": 13,
+        "high": 20,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-cape-town-on-october-24-2026",
+      "slug": "lowest-temperature-in-cape-town-on-october-24-2026-19corhigher",
+      "market_id": "6035582",
+      "kind": "lowest",
+      "station": "FACT",
+      "unit": "C",
+      "rules_hash": "8ec4bf3fd9167778e1893a3becc96eb38d9d2e55f7bc8a2fb9c368932c22c84c",
+      "observed": {
+        "reports": 13,
+        "high": 20,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "lowest-temperature-in-jeddah-on-october-24-2026-29c",
+      "market_id": "6035568",
+      "kind": "lowest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "d29e37582aa08a5c126f12deefaee328d381750ce612bcdc4f3163303dc6a94e",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "lowest-temperature-in-jeddah-on-october-24-2026-30c",
+      "market_id": "6035569",
+      "kind": "lowest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "6f5d42d23cce8c70a819e833c529e5bb02a9eda335b510403f998a24dbd821ad",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "lowest-temperature-in-jeddah-on-october-24-2026-31c",
+      "market_id": "6035570",
+      "kind": "lowest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "e849ef88800eed6a7f48b4ec307f8416c4b0a15b8f943998d8895097420bd829",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-jeddah-on-october-24-2026",
+      "slug": "lowest-temperature-in-jeddah-on-october-24-2026-32corhigher",
+      "market_id": "6035571",
+      "kind": "lowest",
+      "station": "OEJN",
+      "unit": "C",
+      "rules_hash": "3357e8f4bdc8c8b55ea6a9a613b9e6d3289e00734554552dfc7a62b612109263",
+      "observed": {
+        "reports": 14,
+        "high": 37,
+        "low": 27
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "lowest-temperature-in-helsinki-on-october-24-2026-11c",
+      "market_id": "6035558",
+      "kind": "lowest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "a4e814d876615a94994948a842980401e8fbc16f6190489e6c3101abc3e7c6fa",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "lowest-temperature-in-helsinki-on-october-24-2026-12c",
+      "market_id": "6035559",
+      "kind": "lowest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "518e5da7fc2f5e608ea3d37b1f094b88319259435f3191fc2cada7e8b1bf8efc",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-helsinki-on-october-24-2026",
+      "slug": "lowest-temperature-in-helsinki-on-october-24-2026-13corhigher",
+      "market_id": "6035560",
+      "kind": "lowest",
+      "station": "EFHK",
+      "unit": "C",
+      "rules_hash": "295e8c38d6d717f3311af801a5e078cfe4def7603ce1fd5c99e0e6c7df47db1c",
+      "observed": {
+        "reports": 26,
+        "high": 11,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "lowest-temperature-in-amsterdam-on-october-24-2026-11c",
+      "market_id": "6035546",
+      "kind": "lowest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "bd3a2caf877a4f392bf00d726eb209bbf968e563aeb9854072dd953a4a166bfe",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "lowest-temperature-in-amsterdam-on-october-24-2026-12c",
+      "market_id": "6035547",
+      "kind": "lowest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "d78cdb4e15b86a7226700ef51d395186feee06e97d287c1b5910feef52c518c2",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "lowest-temperature-in-amsterdam-on-october-24-2026-13c",
+      "market_id": "6035548",
+      "kind": "lowest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "81a84080fee3cb94ed625f67bbfc500bd0cc4723960e207650237074419339c3",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-amsterdam-on-october-24-2026",
+      "slug": "lowest-temperature-in-amsterdam-on-october-24-2026-14corhigher",
+      "market_id": "6035549",
+      "kind": "lowest",
+      "station": "EHAM",
+      "unit": "C",
+      "rules_hash": "67bb193acd37884e55891b8d88cc8cd70bc91ba32f47d83eb9bd22fb7deef711",
+      "observed": {
+        "reports": 24,
+        "high": 12,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-busan-on-october-24-2026",
+      "slug": "lowest-temperature-in-busan-on-october-24-2026-18c",
+      "market_id": "6035535",
+      "kind": "lowest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "352e282f9b48640fbb5b2fa5af57eb564a31f8feae23c3b5169e1d38e3db45b8",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-busan-on-october-24-2026",
+      "slug": "lowest-temperature-in-busan-on-october-24-2026-19c",
+      "market_id": "6035536",
+      "kind": "lowest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "38f4924fae698ed453cfd3e821704e11aa1a91c91339fed7fd1fceaec8b2cf03",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-busan-on-october-24-2026",
+      "slug": "lowest-temperature-in-busan-on-october-24-2026-20c",
+      "market_id": "6035537",
+      "kind": "lowest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "b86d55e01e72b0a0232bdd21efd0928416e9e87783354b0a1e9247240a17201a",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-busan-on-october-24-2026",
+      "slug": "lowest-temperature-in-busan-on-october-24-2026-21corhigher",
+      "market_id": "6035538",
+      "kind": "lowest",
+      "station": "RKPK",
+      "unit": "C",
+      "rules_hash": "302d675725fff1f3a6c8153fc9a74264e8ea3a5371a4e04e744c6e4d0bd0c36f",
+      "observed": {
+        "reports": 20,
+        "high": 18,
+        "low": 16
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "lowest-temperature-in-istanbul-on-october-24-2026-16c",
+      "market_id": "6035525",
+      "kind": "lowest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "d3c0c59a7eeaf28e63694df375a95285bbd2103f631c0ed6d96a569b0912c598",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "lowest-temperature-in-istanbul-on-october-24-2026-17c",
+      "market_id": "6035526",
+      "kind": "lowest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "d652c22d7a250f16f6568533d6eeab95081808bd5a173dabaaa94ba467e1e148",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-istanbul-on-october-24-2026",
+      "slug": "lowest-temperature-in-istanbul-on-october-24-2026-18corhigher",
+      "market_id": "6035527",
+      "kind": "lowest",
+      "station": "LTFM",
+      "unit": "C",
+      "rules_hash": "cf2f7ddd4152db10cb1d79bd49e793f1476f4ea1920a9bc74ab8e29f703cf06c",
+      "observed": {
+        "reports": 26,
+        "high": 17,
+        "low": 14
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-moscow-on-october-24-2026",
+      "slug": "lowest-temperature-in-moscow-on-october-24-2026-8corhigher",
+      "market_id": "6035516",
+      "kind": "lowest",
+      "station": "UUWW",
+      "unit": "C",
+      "rules_hash": "c64a3d4c456caca8be9c02c600775a57fd3d673f935ecc7290d1eb54fa69483f",
+      "observed": {
+        "reports": 27,
+        "high": 12,
+        "low": 6
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "lowest-temperature-in-shenzhen-on-october-24-2026-26c",
+      "market_id": "6035503",
+      "kind": "lowest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "ea5b08b7d712a27b77168afd10dd8ed2cd8f4a1e8bda275be9d80b099689f618",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "lowest-temperature-in-shenzhen-on-october-24-2026-27c",
+      "market_id": "6035504",
+      "kind": "lowest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "3540626493975212d9ec4274635f86b5746a9f7c365536de80b87a2c74fcd837",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shenzhen-on-october-24-2026",
+      "slug": "lowest-temperature-in-shenzhen-on-october-24-2026-28corhigher",
+      "market_id": "6035505",
+      "kind": "lowest",
+      "station": "ZGSZ",
+      "unit": "C",
+      "rules_hash": "278099505b35493a031406f7bd1f54d4b42cb9a660d9da3e1aff201543e61756",
+      "observed": {
+        "reports": 19,
+        "high": 31,
+        "low": 24
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "lowest-temperature-in-chengdu-on-october-24-2026-19c",
+      "market_id": "6035488",
+      "kind": "lowest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "c2f237fba058c828622b3068c4178e2120e04d6ff8e1c632cce89f219885549e",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "lowest-temperature-in-chengdu-on-october-24-2026-20c",
+      "market_id": "6035489",
+      "kind": "lowest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "663e3ad184064baf6c382a21f29feea19902f290abaf2f6efcc5ee476946fe1c",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "lowest-temperature-in-chengdu-on-october-24-2026-21c",
+      "market_id": "6035490",
+      "kind": "lowest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "c7ff66b70904e1c44acbd439ac5a7d89a9baf0b12f4c002f1f9b1d3f3dda5d4d",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chengdu-on-october-24-2026",
+      "slug": "lowest-temperature-in-chengdu-on-october-24-2026-22corhigher",
+      "market_id": "6035491",
+      "kind": "lowest",
+      "station": "ZUUU",
+      "unit": "C",
+      "rules_hash": "8e520999509703b9d04773d8686b2ead5773795ba560ddd971299c84d2bfa469",
+      "observed": {
+        "reports": 19,
+        "high": 20,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "lowest-temperature-in-wuhan-on-october-24-2026-16c",
+      "market_id": "6035441",
+      "kind": "lowest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "c30bba0839c54a2e8b89cd3ce26f7b7d80a4c2a91a0f5381d152fddef3bf8117",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "lowest-temperature-in-wuhan-on-october-24-2026-17c",
+      "market_id": "6035442",
+      "kind": "lowest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "8fc941ee0fe64ac08e7ff09d31386066861f2747eba564d3f2d1a18d0c4281e1",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wuhan-on-october-24-2026",
+      "slug": "lowest-temperature-in-wuhan-on-october-24-2026-18corhigher",
+      "market_id": "6035443",
+      "kind": "lowest",
+      "station": "ZHHH",
+      "unit": "C",
+      "rules_hash": "fb67df31b9932b0f74a0cb8fec5102bed9963f5f92a5a06223f65efcefed3d6b",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-beijing-on-october-24-2026",
+      "slug": "lowest-temperature-in-beijing-on-october-24-2026-11c",
+      "market_id": "6035410",
+      "kind": "lowest",
+      "station": "ZBAA",
+      "unit": "C",
+      "rules_hash": "3919de4626ca7481c3a1e549d8e072efe47880838e13a56a50afc59049d61b38",
+      "observed": {
+        "reports": 37,
+        "high": 16,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-beijing-on-october-24-2026",
+      "slug": "lowest-temperature-in-beijing-on-october-24-2026-12c",
+      "market_id": "6035414",
+      "kind": "lowest",
+      "station": "ZBAA",
+      "unit": "C",
+      "rules_hash": "c5be8ee3ffbc37adce480076d273b58d7da7418e360df8e7f262a3082076bb12",
+      "observed": {
+        "reports": 37,
+        "high": 16,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-beijing-on-october-24-2026",
+      "slug": "lowest-temperature-in-beijing-on-october-24-2026-13corhigher",
+      "market_id": "6035418",
+      "kind": "lowest",
+      "station": "ZBAA",
+      "unit": "C",
+      "rules_hash": "a19e5db814fa6817ae24b96c26a44c3d3e1e778f5a652fe502127d8b19521ec7",
+      "observed": {
+        "reports": 37,
+        "high": 16,
+        "low": 9
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "lowest-temperature-in-chongqing-on-october-24-2026-19c",
+      "market_id": "6035362",
+      "kind": "lowest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "7a1475fd0672044f58f314fca28312229f810f3b92b27e2f6943c1ae2ce51677",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "lowest-temperature-in-chongqing-on-october-24-2026-20c",
+      "market_id": "6035363",
+      "kind": "lowest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "287130700926837ac9de4c944959787c62751d827871cade63ec9d1e618f59f0",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "lowest-temperature-in-chongqing-on-october-24-2026-21c",
+      "market_id": "6035364",
+      "kind": "lowest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "3e06604ca010325070d3219a70f21f8abdc81e190fbd2eba8b81a6823160c57e",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "lowest-temperature-in-chongqing-on-october-24-2026-22c",
+      "market_id": "6035365",
+      "kind": "lowest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "e5c427452f62115b796e12165125e2984ac1a5f12333a58786d0c142349857d7",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-chongqing-on-october-24-2026",
+      "slug": "lowest-temperature-in-chongqing-on-october-24-2026-23corhigher",
+      "market_id": "6035367",
+      "kind": "lowest",
+      "station": "ZUCK",
+      "unit": "C",
+      "rules_hash": "f21063ce1137dbaa0bfad40bd524688e16955cb462a8715cb666a45c15585323",
+      "observed": {
+        "reports": 19,
+        "high": 22,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-24c",
+      "market_id": "6035306",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "521a84646264d5703051f03d2263e45e21363ee76c10956a2140132c98c00ea4",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-25c",
+      "market_id": "6035308",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "5945a380b53b886f904779150567ed875e2415a3d721c2c25d5b955827bc5e3e",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-26c",
+      "market_id": "6035310",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "b37371285be4b586837de3a07961af37e825073cbca79dec837755081886a94a",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-27c",
+      "market_id": "6035312",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "6c49b986682039140a37666d663ea3f9d06c9a1c637cb7a556e7f62fd3ae4c3a",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-28c",
+      "market_id": "6035313",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "887916fe31c409341b78291210c07ffec19233165834b629e3576f328ced1422",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-29c",
+      "market_id": "6035314",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "6c59bf9fdc3087fd0acf82d1c95b8955630c706961c29f4cdc8c1ed9d9084dfb",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-taipei-on-october-24-2026",
+      "slug": "lowest-temperature-in-taipei-on-october-24-2026-30corhigher",
+      "market_id": "6035315",
+      "kind": "lowest",
+      "station": "RCSS",
+      "unit": "C",
+      "rules_hash": "5f2a1b3277464675675eb241e66597744a71722479156e923820de177928529d",
+      "observed": {
+        "reports": 31,
+        "high": 27,
+        "low": 22
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "lowest-temperature-in-warsaw-on-october-24-2026-8c",
+      "market_id": "6035260",
+      "kind": "lowest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "33d1cfd18198c742701094a8960d4eb3a491136842c35f31a2322aefa3c9d7a1",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "lowest-temperature-in-warsaw-on-october-24-2026-9c",
+      "market_id": "6035264",
+      "kind": "lowest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "6713efdd7daaa538c560c10a9914363eafd5a79ab29e567f9018ed9021cb7978",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "lowest-temperature-in-warsaw-on-october-24-2026-10c",
+      "market_id": "6035270",
+      "kind": "lowest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "4022f363ba9b16ba10d5d7ae7988186ccdff5751df46708f278e82697de93cc8",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-warsaw-on-october-24-2026",
+      "slug": "lowest-temperature-in-warsaw-on-october-24-2026-11corhigher",
+      "market_id": "6035274",
+      "kind": "lowest",
+      "station": "EPWA",
+      "unit": "C",
+      "rules_hash": "b618c29102d7ff414b8373aad42693c7ced20ef848160b9373bd18754c6b86b1",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-6c",
+      "market_id": "6035235",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "0ed635f715cf97327d2cc9b96614bc2c69e5899bd9a10d56049d81f2acd1c17c",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-7c",
+      "market_id": "6035236",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "a54cf567c232dbf6b9091249aaae46e4c8da5131491a4a43c40ec61aabf4d2b1",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-8c",
+      "market_id": "6035237",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "dacfb4a686555137b3b019891548d0b71a818d638879ac98ce69ff6398db8b2c",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-9c",
+      "market_id": "6035238",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "348119274b0db8d5d5e1670de48cdeab037ff3e2d34e1a5ced968e47b4adc3f8",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-10c",
+      "market_id": "6035239",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "f773c983afb938c2d6ecacc7b01d1c42127d6b873f77afea8f8d47f6edfc5e14",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-11c",
+      "market_id": "6035240",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "55ef7fdabd981c8878750d81072a0cb885c85df06a8bb464bbf7ff3c26b51260",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-12c",
+      "market_id": "6035241",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "5ef25fea6869bf5aebc453d7093293190f1d991dec958ad4df18d8dad3d0a388",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-madrid-on-october-24-2026",
+      "slug": "lowest-temperature-in-madrid-on-october-24-2026-13corhigher",
+      "market_id": "6035242",
+      "kind": "lowest",
+      "station": "LEMD",
+      "unit": "C",
+      "rules_hash": "830a7e4d0957c812f5d3e90e410de52eb0d043a467f0ba3f2f9be93a850b8a0c",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 4
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-5c",
+      "market_id": "6035226",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "bc39f40f682fe0b906e52e5864f7f5c8deb88981c401cc7379e22580fbb8ae04",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-6c",
+      "market_id": "6035227",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "4a03a887eed0df075a2be7b219ff387502f4be2a505c8079bdf9ae2f1a7d64f3",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-7c",
+      "market_id": "6035228",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "12371f29fc2f8c232f27554d9d190647e6f803e95458ebf856ed70127cf20e67",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-8c",
+      "market_id": "6035229",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "8a537b5ead3ab0ae0855b21ca9bdad8f552943a2951ea00e32c1ca4165514ceb",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-9c",
+      "market_id": "6035230",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "a4d5db2f3720d30d7807201d8789c209fd87eb47dc2237a6ca091720414ea432",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-milan-on-october-24-2026",
+      "slug": "lowest-temperature-in-milan-on-october-24-2026-10corhigher",
+      "market_id": "6035231",
+      "kind": "lowest",
+      "station": "LIMC",
+      "unit": "C",
+      "rules_hash": "48b87786fe7c9b082d2e9847ce86f58bc4d0f0c53e6664fdb6f925fb4537d8ee",
+      "observed": {
+        "reports": 23,
+        "high": 14,
+        "low": 3
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-20c",
+      "market_id": "6035214",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "b6047f74d0a3e66f95cd7ee428e458a6bc34cf31b55161f6d6127de382e3218e",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-21c",
+      "market_id": "6035215",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "9c0295b947c56162cb14382eef720a6785493c89ffd93928f58848bc26cd2bdb",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-22c",
+      "market_id": "6035216",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "57f9bca072340adec526a05ecccd095a2dc3817776790cbfcc657c052f5968c7",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-23c",
+      "market_id": "6035217",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "ae40779704dd7a5dbb08a69ea4fd15f2bdcff9fedece88dd16717c0101883898",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-24c",
+      "market_id": "6035218",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "e24fca3c36c55877486ea9334cc763b647ac260d210dddc07f8822693a632827",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-25c",
+      "market_id": "6035219",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "7953abe26ae82d76c361da7fb5d09f81f6c7d387ffee90d956a4622852d60549",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-shanghai-on-october-24-2026",
+      "slug": "lowest-temperature-in-shanghai-on-october-24-2026-26corhigher",
+      "market_id": "6035220",
+      "kind": "lowest",
+      "station": "ZSPD",
+      "unit": "C",
+      "rules_hash": "eeb79489cdd66a0e3344e27fb5b3773571542fd1c2fcb9396646b713de8c9d5f",
+      "observed": {
+        "reports": 37,
+        "high": 22,
+        "low": 18
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "lowest-temperature-in-tokyo-on-october-24-2026-19c",
+      "market_id": "6035194",
+      "kind": "lowest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "b384ab0c81856e68faf58ff1cb416ef0d73de8306dd62c047eb01e790c0197d2",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "lowest-temperature-in-tokyo-on-october-24-2026-20c",
+      "market_id": "6035195",
+      "kind": "lowest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "c3a0dc4ebd7712f6004daf17928104ea223d7489e828e9cc223c3e667c0ff6c8",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "lowest-temperature-in-tokyo-on-october-24-2026-21c",
+      "market_id": "6035196",
+      "kind": "lowest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "4877e28d3e0b5010003eb6d052250ef9ff74da2c0f00f8941f73887c83944744",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "lowest-temperature-in-tokyo-on-october-24-2026-22c",
+      "market_id": "6035197",
+      "kind": "lowest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "23a259b163b67e26540bdbdca37c577c85bb52311d24b0b7d1186280afe39892",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tokyo-on-october-24-2026",
+      "slug": "lowest-temperature-in-tokyo-on-october-24-2026-23corhigher",
+      "market_id": "6035198",
+      "kind": "lowest",
+      "station": "RJTT",
+      "unit": "C",
+      "rules_hash": "b1c114581471ff579a2fa8aaf17658bb5809b41df1bf0ef6304d28004322a053",
+      "observed": {
+        "reports": 39,
+        "high": 19,
+        "low": 17
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "lowest-temperature-in-tel-aviv-on-october-24-2026-24c",
+      "market_id": "6035184",
+      "kind": "lowest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "378d8ae7eeac2a3012f5479daa711e0e607083737864f898e952a892f6ae6c87",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "lowest-temperature-in-tel-aviv-on-october-24-2026-25c",
+      "market_id": "6035185",
+      "kind": "lowest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "be47b1fc7e1dbe42ccf0839a2c1cd9c168ae1a5baea2df91c95d965f9932af75",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "lowest-temperature-in-tel-aviv-on-october-24-2026-26c",
+      "market_id": "6035186",
+      "kind": "lowest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "2283497c2f0978803df6a3c512fe85c0aba65215caa9be145fc4d0b56bc06126",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-tel-aviv-on-october-24-2026",
+      "slug": "lowest-temperature-in-tel-aviv-on-october-24-2026-27corhigher",
+      "market_id": "6035187",
+      "kind": "lowest",
+      "station": "LLBG",
+      "unit": "C",
+      "rules_hash": "114e3e9319f0b87d5bee1ba73c33e51e0aa00313fe9afb3e0f61224be2bd42c3",
+      "observed": {
+        "reports": 26,
+        "high": 31,
+        "low": 22
+      },
+      "status": "margin_too_small",
+      "cost": 9.99,
+      "conditional_surplus": 0.009999999999999787,
+      "fee_rate": 0.0,
+      "no_best_ask": 0.999
+    },
+    {
+      "event": "lowest-temperature-in-munich-on-october-24-2026",
+      "slug": "lowest-temperature-in-munich-on-october-24-2026-8c",
+      "market_id": "6035175",
+      "kind": "lowest",
+      "station": "EDDM",
+      "unit": "C",
+      "rules_hash": "80453c68a3ff861750a89ddd07be57fd777d0862e6d128a3ef43bacdc050d6b6",
+      "observed": {
+        "reports": 24,
+        "high": 10,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-munich-on-october-24-2026",
+      "slug": "lowest-temperature-in-munich-on-october-24-2026-9corhigher",
+      "market_id": "6035176",
+      "kind": "lowest",
+      "station": "EDDM",
+      "unit": "C",
+      "rules_hash": "d44792134343247e1cbca7d5b5dcfe1819b38bce5d7f8a2e6abbcef13628ac2e",
+      "observed": {
+        "reports": 24,
+        "high": 10,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "lowest-temperature-in-lucknow-on-october-24-2026-21c",
+      "market_id": "6035162",
+      "kind": "lowest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "697ec5fa4580172dbc2ed47af236ef8ce4c054a2639eaf93d137e6ee0a729d24",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "lowest-temperature-in-lucknow-on-october-24-2026-22c",
+      "market_id": "6035163",
+      "kind": "lowest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "29a3a01ee126be272b82ed02724e9bd7e8c7a852cb538a5ae590bfb3ac014d16",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "lowest-temperature-in-lucknow-on-october-24-2026-23c",
+      "market_id": "6035164",
+      "kind": "lowest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "8ab6634f47b4fe02fe973540a8f891f8e557d9f67bfe1e1b0d816ab89bc48b7c",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-lucknow-on-october-24-2026",
+      "slug": "lowest-temperature-in-lucknow-on-october-24-2026-24corhigher",
+      "market_id": "6035165",
+      "kind": "lowest",
+      "station": "VILK",
+      "unit": "C",
+      "rules_hash": "df5746539f2f7cb98fe0abba38832a77b4278d90067f81ef86f270f25c93b561",
+      "observed": {
+        "reports": 32,
+        "high": 31,
+        "low": 19
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wellington-on-october-24-2026",
+      "slug": "lowest-temperature-in-wellington-on-october-24-2026-16c",
+      "market_id": "6035151",
+      "kind": "lowest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "97e42efe3807c0d6fc5f4f45ce61ab717186759f6861501fbc7b2cd4fbae334c",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wellington-on-october-24-2026",
+      "slug": "lowest-temperature-in-wellington-on-october-24-2026-17c",
+      "market_id": "6035152",
+      "kind": "lowest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "a649f9133309b4cc186c408bcbbec3aff4b03aff38129037fc9f08de021896fa",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wellington-on-october-24-2026",
+      "slug": "lowest-temperature-in-wellington-on-october-24-2026-18c",
+      "market_id": "6035153",
+      "kind": "lowest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "f86d54a6f916291bed9fb67de972fcdd3db2dd58c5fe2b050507cd01b6f5fe9f",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-wellington-on-october-24-2026",
+      "slug": "lowest-temperature-in-wellington-on-october-24-2026-19corhigher",
+      "market_id": "6035154",
+      "kind": "lowest",
+      "station": "NZWN",
+      "unit": "C",
+      "rules_hash": "8bd8455302bd5ea1a64c2e0178c873a34abb00c077fd1b1575e50fed34fc3a2c",
+      "observed": {
+        "reports": 47,
+        "high": 18,
+        "low": 14
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-ankara-on-october-24-2026",
+      "slug": "lowest-temperature-in-ankara-on-october-24-2026-8c",
+      "market_id": "6035139",
+      "kind": "lowest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "adca9a7351d1e5bb8f59af69a95c6e4cb7e6f2748b1ec10e00a8522a237c21c4",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-ankara-on-october-24-2026",
+      "slug": "lowest-temperature-in-ankara-on-october-24-2026-9c",
+      "market_id": "6035140",
+      "kind": "lowest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "bcc67882c9edff294dcd91a99394e747ee0fde5a1306ef49d2aafa621b57e7b7",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-ankara-on-october-24-2026",
+      "slug": "lowest-temperature-in-ankara-on-october-24-2026-10c",
+      "market_id": "6035141",
+      "kind": "lowest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "1ee8f9a8ab874058b839123aabc6e90c9ca5fc005182a1585b08529c7ecd9868",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-ankara-on-october-24-2026",
+      "slug": "lowest-temperature-in-ankara-on-october-24-2026-11c",
+      "market_id": "6035142",
+      "kind": "lowest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "a916c864774699ed6251a4ebe04140f0febf9ff6ae8dfc8f5d8d408ff1bc57a7",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-ankara-on-october-24-2026",
+      "slug": "lowest-temperature-in-ankara-on-october-24-2026-12corhigher",
+      "market_id": "6035143",
+      "kind": "lowest",
+      "station": "LTAC",
+      "unit": "C",
+      "rules_hash": "13045510bb7b6e276f2febbc21360fb6b9a7cf2194a27a2bbfb64f034f166d7f",
+      "observed": {
+        "reports": 26,
+        "high": 19,
+        "low": 6
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seoul-on-october-24-2026",
+      "slug": "lowest-temperature-in-seoul-on-october-24-2026-17c",
+      "market_id": "6035130",
+      "kind": "lowest",
+      "station": "RKSI",
+      "unit": "C",
+      "rules_hash": "8abd0c72c3458af9372f84be47e6318241cedabfb31c1c266c4bac19b93b5e44",
+      "observed": {
+        "reports": 39,
+        "high": 18,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seoul-on-october-24-2026",
+      "slug": "lowest-temperature-in-seoul-on-october-24-2026-18c",
+      "market_id": "6035131",
+      "kind": "lowest",
+      "station": "RKSI",
+      "unit": "C",
+      "rules_hash": "a6a8db5a0a7b75b839d37c4626f664141a914581bb18aca6a04bc5807cd61d4b",
+      "observed": {
+        "reports": 39,
+        "high": 18,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-seoul-on-october-24-2026",
+      "slug": "lowest-temperature-in-seoul-on-october-24-2026-19corhigher",
+      "market_id": "6035132",
+      "kind": "lowest",
+      "station": "RKSI",
+      "unit": "C",
+      "rules_hash": "550522283ca81c8153364769b508cedc06bbd0310e1f831137598bdc178947f4",
+      "observed": {
+        "reports": 39,
+        "high": 18,
+        "low": 15
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-paris-on-october-24-2026",
+      "slug": "lowest-temperature-in-paris-on-october-24-2026-9c",
+      "market_id": "6035118",
+      "kind": "lowest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "0ec1a1ae76241e0315211aaa7f7381e4415a6c3d9bf9df0a8fcb38bb4bb2e369",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-paris-on-october-24-2026",
+      "slug": "lowest-temperature-in-paris-on-october-24-2026-10c",
+      "market_id": "6035119",
+      "kind": "lowest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "e4e3db2611c0051e493d268f45e7ea89310ceeab823412ba2c15b5da6768ba83",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-paris-on-october-24-2026",
+      "slug": "lowest-temperature-in-paris-on-october-24-2026-11c",
+      "market_id": "6035120",
+      "kind": "lowest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "af0bcb8eb821a67d9c4d7fc0427a1be2063fe5d944438c547849a262657ac311",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-paris-on-october-24-2026",
+      "slug": "lowest-temperature-in-paris-on-october-24-2026-12corhigher",
+      "market_id": "6035121",
+      "kind": "lowest",
+      "station": "LFPB",
+      "unit": "C",
+      "rules_hash": "81aa5c17ddac7d21524be271bb9f7ba89ecd2b01fc0caa2637a27395b751d066",
+      "observed": {
+        "reports": 25,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-london-on-october-24-2026",
+      "slug": "lowest-temperature-in-london-on-october-24-2026-9c",
+      "market_id": "6035108",
+      "kind": "lowest",
+      "station": "EGLC",
+      "unit": "C",
+      "rules_hash": "2a214d76b2d7aa59b8886ab24ee697cca4fe7de69cbd80936af8b77bfb2921aa",
+      "observed": {
+        "reports": 22,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-london-on-october-24-2026",
+      "slug": "lowest-temperature-in-london-on-october-24-2026-10c",
+      "market_id": "6035109",
+      "kind": "lowest",
+      "station": "EGLC",
+      "unit": "C",
+      "rules_hash": "5a7ec745124e0c992afefdc1577333d213e761baf2b819a3e7b2b9f6b5d9e86a",
+      "observed": {
+        "reports": 22,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    },
+    {
+      "event": "lowest-temperature-in-london-on-october-24-2026",
+      "slug": "lowest-temperature-in-london-on-october-24-2026-11corhigher",
+      "market_id": "6035110",
+      "kind": "lowest",
+      "station": "EGLC",
+      "unit": "C",
+      "rules_hash": "c9658627b1b89d6bacaf52293778a41ff02d27b13cf8a2263a8d680f8419aab8",
+      "observed": {
+        "reports": 22,
+        "high": 11,
+        "low": 7
+      },
+      "status": "insufficient_depth"
+    }
+  ],
+  "conclusion": "Conditional quote screen only; no orders, fills, or realized profits. Observation corrections remain possible."
+}

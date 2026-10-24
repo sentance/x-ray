@@ -1,0 +1,14 @@
+# akroll replica — proposed forward paper experiment
+
+This specifies the next test; the replica has not been implemented or started. No live trading approval is implied. Starting paper cash is $1,000, with fresh immutable order/quote/receipt timestamps. The user's maximum acceptable loss is still unspecified.
+
+**Objective:** test whether qualifying passive quotes plus prompt negative-risk inventory recycling earn incentives exceeding execution and residual-inventory costs. Do not optimize for reported upstream P&L or trade volume.
+
+1. Select named outcomes with an active, verified liquidity allocation and a supported negative-risk adapter. Check dates, reward currency, minimum size and maximum spread. Exclude direct placeholder/Other orders; give unquoted residual tokens zero liquidation value. Start with small hedge sets. A 19-leg $2,630 basket does not fit the starting bankroll.
+2. Before placing a paper quote, reserve enough cash for a full initiating fill and a realistically executable hedge. Respect simultaneous commitments across events. Reject a quote if the minimum qualifying size cannot be funded with its hedge and operational reserve. The reward minimum is not the whole basket's capital requirement.
+3. Quote post-only orders that qualify under the current scoring rules, including two-sided requirements near extreme probabilities. Record queue ahead and quote duration. Never count a midpoint touch, a public trader's fill, or the absence of volume as this account's fill.
+4. Replay qualifying fills conservatively against recorded trades and book changes. After an initiating fill, cancel incompatible quotes, price the hedge from actual asks/bids and size, then account for conversion collateral and residual YES sales. Record partial/failed legs, timing, fees and gas. A batch of orders is not atomic.
+5. Keep trading cash P&L, inventory liquidation marks, liquidity rewards, maker rebates and taker rebates in separate ledgers. Do not count conversion principal as profit or subtract fees twice. Claim no reward income from pool size alone; the paper account has no authenticated earned-reward score. Report the zero-incentive result and transparent incentive scenarios separately.
+6. Freeze the quoting and hedge policy before collecting a fresh evaluation period. Observe at least 30 calendar days spanning catalysts and ordinary periods, then extend if rare losses or missing data prevent a conclusion. This duration does not guarantee statistical confidence. Stop the experiment on an unreconciled balance, unsupported contract/rule change or a breach of explicitly chosen paper risk limits.
+
+A go-live decision would need actual execution/reward evidence and the user's loss limit. The observed historical $2,079 marked gain on $1,012 funding does not establish a repeatable income rate.

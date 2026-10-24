@@ -5,7 +5,7 @@ import { postStream } from '@/api/stream'
 import { renderMarkdown } from '@/lib/markdown'
 import Card from './Card.vue'
 
-/** @param ready whether the wallet's sync has finished; Claude only sees finished reports */
+/** @param ready whether the wallet's sync has finished; the AI only sees finished reports */
 const props = defineProps<{ address: string; ready: boolean }>()
 
 interface Turn {
@@ -135,18 +135,18 @@ const narrativeHtml = computed(() =>
 </script>
 
 <template>
-  <Card title="Ask Claude" subtitle="A written explanation of this wallet's strategy, and answers to your questions">
+  <Card title="Ask AI" subtitle="A written explanation of this wallet's strategy, and answers to your questions">
     <p v-if="enabled === false" class="text-sm text-slate-400">
-      Ask Claude isn't set up on this server (it needs an Anthropic API key).
+      Ask AI isn't set up on this server (it needs an OpenAI API key).
     </p>
     <p v-else-if="!ready" class="text-sm text-slate-400">
-      Available once the sync finishes, so Claude works from the complete history.
+      Available once the sync finishes, so the AI works from the complete history.
     </p>
 
     <template v-else-if="enabled">
       <div v-if="narrative || streaming === 'narrative'">
         <p v-if="streaming === 'narrative' && !pendingText" class="text-sm text-slate-400" role="status">
-          Claude is reading the reports…
+          Reading the reports…
         </p>
         <!-- eslint-disable-next-line vue/no-v-html -- sanitized in renderMarkdown -->
         <div class="md text-sm text-slate-200" aria-live="polite" v-html="narrativeHtml" />
@@ -170,7 +170,7 @@ const narrativeHtml = computed(() =>
           <div v-else class="md text-sm text-slate-200" v-html="renderMarkdown(t.text)" />
         </template>
         <template v-if="streaming === 'chat'">
-          <p v-if="!pendingText" class="text-sm text-slate-400" role="status">Claude is thinking…</p>
+          <p v-if="!pendingText" class="text-sm text-slate-400" role="status">Thinking…</p>
           <!-- eslint-disable-next-line vue/no-v-html -- sanitized in renderMarkdown -->
           <div v-else class="md text-sm text-slate-200" aria-live="polite" v-html="renderMarkdown(pendingText)" />
         </template>
@@ -191,9 +191,9 @@ const narrativeHtml = computed(() =>
           </button>
         </div>
         <form class="flex gap-2" @submit.prevent="ask()">
-          <label for="ask-claude" class="sr-only">Ask Claude about this wallet</label>
+          <label for="ask-ai" class="sr-only">Ask the AI about this wallet</label>
           <textarea
-            id="ask-claude"
+            id="ask-ai"
             ref="input"
             v-model="question"
             rows="1"
@@ -211,7 +211,7 @@ const narrativeHtml = computed(() =>
           </button>
         </form>
         <p class="mt-2 text-xs text-slate-500">
-          Claude only sees the reports on this page. It describes what the wallet did; it isn't trading advice.
+          The AI only sees the reports on this page. It describes what the wallet did; it isn't trading advice.
         </p>
       </div>
     </template>

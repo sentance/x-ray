@@ -2,7 +2,7 @@ import { ApiError } from './client'
 
 export interface StreamHandlers {
   onText: (text: string) => void
-  /** Claude declined; any text received so far must be discarded. */
+  /** The model declined; any text received so far must be discarded. */
   onRefusal: (message: string) => void
   onError: (message: string) => void
   onDone: () => void
@@ -58,7 +58,7 @@ function dispatch(raw: string, handlers: StreamHandlers): boolean {
       handlers.onDone()
       return true
     case 'refusal':
-      handlers.onRefusal(payload.message ?? 'Claude declined to answer.')
+      handlers.onRefusal(payload.message ?? 'The AI declined to answer.')
       return true
     case 'error':
       handlers.onError(payload.message ?? 'Something went wrong.')

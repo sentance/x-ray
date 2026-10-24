@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import com.xray.config.XrayProperties;
 
 /**
- * Hourly limits on Claude requests, per visitor and overall. The site is public and every request is billed to
+ * Hourly limits on AI requests, per visitor and overall. The site is public and every request is billed to
  * the operator's API key, so both limits apply before a request is sent.
  */
 @Component

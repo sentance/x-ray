@@ -2,10 +2,10 @@
 
 Reverse-engineer the strategy behind any public Polymarket wallet: lifetime P&L, what it trades and how,
 whether the edge is skill or luck, whether it still works, a Binance-lag test for crypto bots, a leaderboard
-of top earners tagged by strategy, and a Claude-written strategy explanation you can question.
+of top earners tagged by strategy, and an AI-written strategy explanation you can question (OpenAI).
 
 Read-only: uses Polymarket's public Data/Gamma APIs and Binance public market data. No keys needed
-(except an optional Anthropic API key for the "Ask Claude" tab).
+(except an optional OpenAI API key for "Ask AI").
 
 ## Stack
 - `backend/` — Java 25, Spring Boot 4, PostgreSQL + Flyway
@@ -13,7 +13,7 @@ Read-only: uses Polymarket's public Data/Gamma APIs and Binance public market da
 
 ## Run with Docker
 ```bash
-cp .env.example .env   # optionally set ANTHROPIC_API_KEY
+cp .env.example .env   # optionally set OPENAI_API_KEY
 docker compose up --build
 ```
 Open http://localhost:5173.

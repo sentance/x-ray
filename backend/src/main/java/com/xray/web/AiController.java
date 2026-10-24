@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
-import com.anthropic.errors.AnthropicServiceException;
-import com.anthropic.errors.RateLimitException;
+import com.openai.errors.OpenAIServiceException;
+import com.openai.errors.RateLimitException;
 import com.xray.ai.AiRateLimiter;
 import com.xray.ai.NarrativeRepository;
 import com.xray.ai.WalletAnalyst;
@@ -35,7 +35,7 @@ import com.xray.ingest.WalletRepository.Wallet;
 import jakarta.servlet.http.HttpServletRequest;
 
 /**
- * "Ask Claude": a strategy explanation per wallet (stored until the next sync) and follow-up questions, both
+ * "Ask AI": a strategy explanation per wallet (stored until the next sync) and follow-up questions, both
  * streamed as server-sent events: {@code text} chunks, then {@code done}, or {@code refusal} (discard the partial
  * text) or {@code error}.
  */
@@ -103,7 +103,7 @@ public class AiController {
 		}
 		requireAllowance(request);
 		String brief = briefing.build(wallet.address());
-		executor.submit(() -> stream(emitter, brief, List.of(), WalletAnalyst.EXPLAIN,
+		executor.submit(() -> stream(emitter, wallet.address(), brief, List.of(), WalletAnalyst.EXPLAIN,
 				text -> narratives.save(wallet.address(), wallet.syncVersion(), text)));
 		return emitter;
 	}
@@ -128,38 +128,38 @@ public class AiController {
 		history.addAll(turns);
 		String brief = briefing.build(wallet.address());
 		SseEmitter emitter = new SseEmitter(STREAM_TIMEOUT.toMillis());
-		executor.submit(() -> stream(emitter, brief, history, question, text -> {
+		executor.submit(() -> stream(emitter, wallet.address(), brief, history, question, text -> {
 		}));
 		return emitter;
 	}
 
-	private void stream(SseEmitter emitter, String brief, List<Turn> history, String question,
+	private void stream(SseEmitter emitter, String address, String brief, List<Turn> history, String question,
 			Consumer<String> onComplete) {
 		StringBuilder text = new StringBuilder();
 		try {
-			Outcome outcome = analyst.answer(brief, history, question, chunk -> {
+			Outcome outcome = analyst.answer(address, brief, history, question, chunk -> {
 				text.append(chunk);
 				send(emitter, "text", Map.of("text", chunk));
 			});
 			if (outcome.refused()) {
 				finish(emitter, "refusal", Map.of("message",
-						"Claude declined to answer this one. Try rephrasing the question."));
+						"The AI declined to answer this one. Try rephrasing the question."));
 				return;
 			}
 			onComplete.accept(text.toString());
 			finish(emitter, "done", Map.of("stopReason", String.valueOf(outcome.stopReason())));
 		}
 		catch (RateLimitException e) {
-			finish(emitter, "error", Map.of("message", "Claude is busy right now; try again in a minute."));
+			finish(emitter, "error", Map.of("message", "The AI is busy right now; try again in a minute."));
 		}
-		catch (AnthropicServiceException e) {
+		catch (OpenAIServiceException e) {
 			// Details (billing, bad request) are for the operator's logs, not the visitor.
-			log.warn("Claude request failed: {}", e.getMessage());
-			finish(emitter, "error", Map.of("message", "Ask Claude is unavailable right now; try again later."));
+			log.warn("OpenAI request failed: {}", e.getMessage());
+			finish(emitter, "error", Map.of("message", "Ask AI is unavailable right now; try again later."));
 		}
 		catch (Exception e) {
-			log.error("Claude stream failed", e);
-			finish(emitter, "error", Map.of("message", "Something went wrong while Claude was answering."));
+			log.error("AI stream failed", e);
+			finish(emitter, "error", Map.of("message", "Something went wrong while the AI was answering."));
 		}
 	}
 
@@ -167,7 +167,7 @@ public class AiController {
 	private Wallet readyWallet(String address) {
 		if (!analyst.enabled()) {
 			throw new ResponseStatusException(HttpStatus.SERVICE_UNAVAILABLE,
-					"Ask Claude isn't set up on this server (no Anthropic API key)");
+					"Ask AI isn't set up on this server (no OpenAI API key)");
 		}
 		Wallet wallet = analysis.wallet(address);
 		if (wallet.lastSyncedAt() == null || analysis.syncing(address)) {
@@ -179,7 +179,7 @@ public class AiController {
 	private void requireAllowance(HttpServletRequest request) {
 		if (!limiter.tryAcquire(visitor(request))) {
 			throw new ResponseStatusException(HttpStatus.TOO_MANY_REQUESTS,
-					"You've reached the hourly limit for questions to Claude; try again later");
+					"You've reached the hourly limit for AI questions; try again later");
 		}
 	}
 

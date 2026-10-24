@@ -18,8 +18,8 @@ public record XrayProperties(Polymarket polymarket, Binance binance, Sync sync, 
 	}
 
 	/**
-	 * @param chatPerIpPerHour Claude requests (explanations and chat answers) one visitor may make per hour
-	 * @param requestsPerHour Claude requests across all visitors per hour, a ceiling on what the public site spends
+	 * @param chatPerIpPerHour AI requests (explanations and chat answers) one visitor may make per hour
+	 * @param requestsPerHour AI requests across all visitors per hour, a ceiling on what the public site spends
 	 */
 	public record Ai(String apiKey, String model, int chatPerIpPerHour, int requestsPerHour) {
 

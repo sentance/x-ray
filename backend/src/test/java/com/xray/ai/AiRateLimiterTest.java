@@ -12,7 +12,7 @@ class AiRateLimiterTest {
 
 	private static AiRateLimiter limiter(int perVisitor, int total) {
 		return new AiRateLimiter(new XrayProperties(null, null, null,
-				new XrayProperties.Ai("key", "claude-opus-5-5", perVisitor, total), List.of()));
+				new XrayProperties.Ai("key", "gpt-5.6-luna", perVisitor, total), List.of()));
 	}
 
 	@Test

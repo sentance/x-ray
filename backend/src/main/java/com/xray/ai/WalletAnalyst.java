@@ -1,5 +1,6 @@
 package com.xray.ai;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -8,22 +9,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.anthropic.client.AnthropicClient;
-import com.anthropic.client.okhttp.AnthropicOkHttpClient;
-import com.anthropic.core.JsonValue;
-import com.anthropic.core.http.StreamResponse;
-import com.anthropic.models.beta.messages.BetaCacheControlEphemeral;
-import com.anthropic.models.beta.messages.BetaOutputConfig;
-import com.anthropic.models.beta.messages.BetaRawMessageStreamEvent;
-import com.anthropic.models.beta.messages.BetaStopReason;
-import com.anthropic.models.beta.messages.BetaTextBlockParam;
-import com.anthropic.models.beta.messages.BetaThinkingConfigAdaptive;
-import com.anthropic.models.beta.messages.MessageCreateParams;
+import com.openai.client.OpenAIClient;
+import com.openai.client.okhttp.OpenAIOkHttpClient;
+import com.openai.core.http.StreamResponse;
+import com.openai.models.Reasoning;
+import com.openai.models.ReasoningEffort;
+import com.openai.models.responses.EasyInputMessage;
+import com.openai.models.responses.ResponseCreateParams;
+import com.openai.models.responses.ResponseInputItem;
+import com.openai.models.responses.ResponseStreamEvent;
 import com.xray.config.XrayProperties;
 
 import jakarta.annotation.PreDestroy;
 
-/** Claude explaining one wallet's reports, as a one-off explanation or a conversation about it. */
+/** An OpenAI model explaining one wallet's reports, as a one-off explanation or a conversation about it. */
 @Service
 public class WalletAnalyst {
 
@@ -72,17 +71,17 @@ public class WalletAnalyst {
 			sentences), where the edge comes from, whether the record looks like skill or luck, whether it still \
 			works, and the main risks or open questions. Keep it under 400 words.""";
 
-	/** Streaming, so a long answer can't hit a request timeout; effort keeps the actual spend down. */
-	private static final long MAX_TOKENS = 64_000;
+	/** Generous: explanations run to about 1,000 output tokens including reasoning. */
+	private static final long MAX_OUTPUT_TOKENS = 16_000;
 
-	private final Optional<AnthropicClient> client;
+	private final Optional<OpenAIClient> client;
 
 	private final String model;
 
 	public WalletAnalyst(XrayProperties properties) {
 		this.model = properties.ai().model();
 		this.client = properties.ai().enabled()
-				? Optional.of(AnthropicOkHttpClient.builder().apiKey(properties.ai().apiKey()).build())
+				? Optional.of(OpenAIOkHttpClient.builder().apiKey(properties.ai().apiKey()).build())
 				: Optional.empty();
 	}
 
@@ -91,52 +90,64 @@ public class WalletAnalyst {
 	}
 
 	/**
-	 * Streams Claude's answer to {@code question}, after the earlier {@code turns}, about the wallet in
+	 * Streams the model's answer to {@code question}, after the earlier {@code turns}, about the wallet in
 	 * {@code briefing}.
 	 */
-	public Outcome answer(String briefing, List<Turn> turns, String question, Consumer<String> onText) {
-		AnthropicClient anthropic = client.orElseThrow(() -> new IllegalStateException("No Anthropic API key"));
-		MessageCreateParams.Builder params = MessageCreateParams.builder()
-			.model(model)
-			.maxTokens(MAX_TOKENS)
-			.thinking(BetaThinkingConfigAdaptive.builder().build())
-			.outputConfig(BetaOutputConfig.builder().effort(BetaOutputConfig.Effort.MEDIUM).build())
-			// The instructions never change and the wallet data only changes per wallet, so both are cached;
-			// follow-up questions about the same wallet then read them from the cache.
-			.systemOfBetaTextBlockParams(List.of(BetaTextBlockParam.builder().text(INSTRUCTIONS).build(),
-					BetaTextBlockParam.builder()
-						.text("Wallet data:\n" + briefing)
-						.cacheControl(BetaCacheControlEphemeral.builder().build())
-						.build()))
-			// If a safety classifier declines, retry server-side on the model Anthropic recommends for that case.
-			.addBeta("server-side-fallback-2026-07-01")
-			.putAdditionalBodyProperty("fallbacks", JsonValue.from("default"));
+	public Outcome answer(String address, String briefing, List<Turn> turns, String question,
+			Consumer<String> onText) {
+		OpenAIClient openai = client.orElseThrow(() -> new IllegalStateException("No OpenAI API key"));
+		List<ResponseInputItem> input = new ArrayList<>();
 		for (Turn t : turns) {
-			if ("assistant".equals(t.role())) {
-				params.addAssistantMessage(t.text());
-			}
-			else {
-				params.addUserMessage(t.text());
-			}
+			input.add(message("assistant".equals(t.role()) ? EasyInputMessage.Role.ASSISTANT
+					: EasyInputMessage.Role.USER, t.text()));
 		}
-		params.addUserMessage(question);
+		input.add(message(EasyInputMessage.Role.USER, question));
+		ResponseCreateParams params = ResponseCreateParams.builder()
+			.model(model)
+			// Instructions first, then the wallet data: a stable prefix that OpenAI caches automatically, so
+			// follow-up questions about the same wallet reuse it. The cache key keeps one wallet's requests together.
+			.instructions(INSTRUCTIONS + "\n\nWallet data:\n" + briefing)
+			.promptCacheKey("xray-wallet-" + address)
+			.inputOfResponse(input)
+			// Low effort: the reports already hold the analysis, so the model mostly has to explain it.
+			.reasoning(Reasoning.builder().effort(ReasoningEffort.LOW).build())
+			.maxOutputTokens(MAX_OUTPUT_TOKENS)
+			.store(false)
+			.build();
 
 		String[] stopReason = { null };
-		try (StreamResponse<BetaRawMessageStreamEvent> stream = anthropic.beta().messages().createStreaming(params.build())) {
+		boolean[] refused = { false };
+		try (StreamResponse<ResponseStreamEvent> stream = openai.responses().createStreaming(params)) {
 			stream.stream().forEach(event -> {
-				event.contentBlockDelta().flatMap(d -> d.delta().text()).ifPresent(t -> onText.accept(t.text()));
-				event.messageDelta().flatMap(d -> d.delta().stopReason()).ifPresent(r -> stopReason[0] = r.toString());
+				event.outputTextDelta().ifPresent(d -> onText.accept(d.delta()));
+				event.refusalDelta().ifPresent(d -> refused[0] = true);
+				event.completed().ifPresent(c -> stopReason[0] = "completed");
+				event.incomplete()
+					.ifPresent(i -> stopReason[0] = i.response()
+						.incompleteDetails()
+						.flatMap(d -> d.reason())
+						.map(Object::toString)
+						.orElse("incomplete"));
+				event.failed().ifPresent(f -> {
+					throw new IllegalStateException("Response failed: " + f.response().error());
+				});
+				event.error().ifPresent(e -> {
+					throw new IllegalStateException("Stream error: " + e.message());
+				});
 			});
 		}
-		boolean refused = BetaStopReason.REFUSAL.toString().equals(stopReason[0]);
-		if (refused) {
-			log.info("Claude declined a wallet question");
+		if (refused[0]) {
+			log.info("The model declined a wallet question");
 		}
-		return new Outcome(stopReason[0], refused);
+		return new Outcome(stopReason[0], refused[0]);
+	}
+
+	private static ResponseInputItem message(EasyInputMessage.Role role, String text) {
+		return ResponseInputItem.ofEasyInputMessage(EasyInputMessage.builder().role(role).content(text).build());
 	}
 
 	@PreDestroy
 	void close() {
-		client.ifPresent(AnthropicClient::close);
+		client.ifPresent(OpenAIClient::close);
 	}
 }

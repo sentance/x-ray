@@ -23,7 +23,7 @@ import tools.jackson.databind.json.JsonMapper;
 import tools.jackson.databind.node.ArrayNode;
 import tools.jackson.databind.node.ObjectNode;
 
-/** The wallet's computed reports as compact JSON, which is everything Claude is told about the wallet. */
+/** The wallet's computed reports as compact JSON, which is everything the AI is told about the wallet. */
 @Component
 public class WalletBriefing {
 

@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Repository;
 
-/** Claude's strategy explanation per wallet, kept until the wallet's next sync. */
+/** The AI's strategy explanation per wallet, kept until the wallet's next sync. */
 @Repository
 public class NarrativeRepository {
 

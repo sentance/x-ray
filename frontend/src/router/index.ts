@@ -12,6 +12,7 @@ const router = createRouter({
       props: true,
     },
     { path: '/leaderboard', name: 'leaderboard', component: () => import('@/views/LeaderboardView.vue') },
+    { path: '/paper/:id?', name: 'paper', component: () => import('@/views/PaperView.vue') },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   // Filter changes only touch the query; keep the reader's place for those.

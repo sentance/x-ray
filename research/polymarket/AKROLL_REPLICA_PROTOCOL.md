@@ -1,6 +1,6 @@
 # akroll replica — proposed forward paper experiment
 
-This specifies the next test; the replica has not been implemented or started. No live trading approval is implied. Starting paper cash is $1,000, with fresh immutable order/quote/receipt timestamps. The user's maximum acceptable loss is still unspecified.
+This specifies the research test. A bounded two-NO-leg paper implementation is now available from the app's **Paper Trading** page; its exact policy, limitations and run instructions are in [PAPER_TRADING.md](PAPER_TRADING.md). The user starts a fresh session explicitly. No live trading approval is implied. Starting paper cash is $1,000, with fresh immutable order/quote/receipt timestamps. The user's maximum acceptable live loss is still unspecified.
 
 **Objective:** test whether qualifying passive quotes plus prompt negative-risk inventory recycling earn incentives exceeding execution and residual-inventory costs. Do not optimize for reported upstream P&L or trade volume.
 

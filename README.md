@@ -37,5 +37,8 @@ public-data watcher for eliminated bins and complete temperature-bin baskets. It
 
 [akroll wallet audit](research/polymarket/AKROLL_AUDIT.md) reconciles public activity to on-chain cash,
 separates incentive income, and outlines a paper replica of its negative-risk quoting and hedging mechanism.
-The [replica protocol](research/polymarket/AKROLL_REPLICA_PROTOCOL.md) is a specification;
-an executable akroll paper trader and an app control for running it are not implemented yet.
+The app's **Paper Trading** page (`/paper`) runs a persistent, public-data simulation of a two-NO-leg
+maker/hedger with a default $1,000 paper bankroll. Review the frozen limits, then start a test.
+It models queues, partial fills, hedge latency, conversion fees and retained inventory; it never places real orders.
+Earned incentives remain zero and optional scenarios stay separate from cash.
+See the [paper runner guide](research/polymarket/PAPER_TRADING.md) for its exact policy, evidence export and limitations.

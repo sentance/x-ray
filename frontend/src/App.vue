@@ -4,9 +4,12 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header class="border-b border-slate-800 bg-slate-900/60">
-    <nav class="mx-auto flex max-w-6xl items-center gap-6 px-4 py-3">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
       <RouterLink to="/" class="text-lg font-semibold tracking-tight text-white">
         Polymarket <span class="text-sky-400">X-Ray</span>
+      </RouterLink>
+      <RouterLink to="/paper" class="text-sm text-slate-400 hover:text-white" active-class="text-white">
+        Paper Trading
       </RouterLink>
       <RouterLink to="/leaderboard" class="text-sm text-slate-400 hover:text-white" active-class="text-white">
         Who's winning now
